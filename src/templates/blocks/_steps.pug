@@ -1,4 +1,4 @@
-.steps
+section.steps
     .steps__bg
         .steps__content
             .container
@@ -86,16 +86,16 @@
                 .steps__title
                     h2 ПОЯВИЛИСЬ ВОПРОСЫ?
                 .steps__subtitle Появились какие-либо вопросы, напишите нам, и мы на них ответим
-                form.steps__form
+                form.steps__form(autocomplete="off" action="#" method="post")
                     .steps__form-row
                         input(type="text" id="steps-name" name="name" placeholder="Ваше имя")
                         input(type="tel" id="steps-phone" name="phone" placeholder="Ваш телефон")
                     .steps__form-row
-                        textarea(type="text" id="steps-question" name="question" placeholder="Ваш вопрос")
+                        textarea(id="steps-question" name="question" placeholder="Ваш вопрос")
                     .steps__form-footer
                         .steps__form-notes Нажимая кнопку, вы соглашаетесь с политикой конфиденциальности и на обработку персональных данных
                         button(type="submit").btn.btn-outer.btn-white.btn-big ОТПРАВИТЬ ЗАЯВКУ
-    .steps__icon.steps__icon-1
+    .eis__icon.eis__icon-1
         .icon.icon-eis-1
-    .steps__icon.steps__icon-8
+    .eis__icon.eis__icon-8
         .icon.icon-eis-8

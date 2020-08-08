@@ -11,6 +11,10 @@
         padding: 108px 0 105px;
     }
 
+    &__title {
+        display: none;
+    }
+
     &__subtitle {
         padding: 0 24px 0 48%;
         margin: 0 0 103px;
@@ -113,13 +117,8 @@
         transform: translate3d(-50%, 50%, 0);
     }
 
-    &__icon {
-        position: absolute;
-        z-index: 10;
-
-        &-6 {
-            bottom: 53px;
-            right: 20%;
-        }
+    .eis__icon-6 {
+        bottom: 53px;
+        right: 20%;
     }
 }

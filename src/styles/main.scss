@@ -1,6 +1,7 @@
 @charset 'utf-8';
 
 @import "./common/_normalize.scss";
+@import "./common/slick.scss";
 
 @import "./modules/_variables.scss";
 @import "./modules/_mixins.scss";
@@ -18,7 +19,7 @@
 @import "./blocks/_about.scss";
 @import "./blocks/_steps.scss";
 @import "./blocks/_technology.scss";
-@import "./blocks/_dover.scss";
+@import "./blocks/_confidence.scss";
 @import "./blocks/_vybor.scss";
 @import "./blocks/_reviews.scss";
 @import "./blocks/_publication.scss";

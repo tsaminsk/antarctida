@@ -46,6 +46,10 @@
     @include sprite($eis-10);
 }
 
+.icon-eis-11 {
+    @include sprite($eis-11);
+}
+
 .icon-pinguin {
     cursor: pointer;
 

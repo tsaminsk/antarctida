@@ -93,25 +93,20 @@
         }
     }
 
-    &__icon {
-        position: absolute;
-        z-index: 10;
+    .eis__icon-1 {
+        top: -40px;
+        right: 21%;
+    }
 
-        &-1 {
-            top: -40px;
-            right: 21%;
-        }
+    .eis__icon-2 {
+        top: 16%;
+        left: 60.5%;
 
-        &-2 {
-            top: 16%;
-            left: 60.5%;
+        transform: scale(.65);
+    }
 
-            transform: scale(.65);
-        }
-
-        &-3 {
-            bottom: -62px;
-            left: 16%;
-        }
+    .eis__icon-3 {
+        bottom: -62px;
+        left: 16%;
     }
 }

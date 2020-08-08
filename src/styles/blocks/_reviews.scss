@@ -23,22 +23,23 @@
 
     &__slider {
         position: relative;
-    }
 
-    &__slider-outer {
         margin: 0 -10px;
     }
 
     &__slider-inner {
-        display: flex;
+        // display: flex;
     }
 
     &__card {
-        width: 273px;
+        width: 293px;
         height: 374px;
+        padding: 0 10px;
+    }
+
+    &__card-inner {
+        height: 100%;
         padding: 5px;
-        margin: 0 10px;
-        overflow: hidden;
 
         background-color: rgba($colorWhite, .2);
         backdrop-filter: blur(2px);
@@ -50,6 +51,7 @@
 
         width: 100%;
         height: 100%;
+        overflow: hidden;
 
         img {
             position: absolute;
@@ -65,11 +67,18 @@
         top: 46.8%;
 
         &--left {
-            left: -16px;
+            left: -8px;
         }
 
         &--right {
-            right: -16px;
+            right: -8px;
         }
+    }
+
+    .eis__icon-1 {
+        bottom: 15%;
+        right: 21.9%;
+
+        transform: scale(.67);
     }
 }

@@ -185,20 +185,15 @@
         @include montserrat(400);
     }
 
-    &__icon {
-        position: absolute;
-        z-index: 10;
+    .eis__icon-1 {
+        top: 56%;
+        left: 31.2%;
 
-        &-1 {
-            top: 56%;
-            left: 31.2%;
+        transform: scale(.85);
+    }
 
-            transform: scale(.85);
-        }
-
-        &-8 {
-            bottom: -56px;
-            right: 16.7%;
-        }
+    .eis__icon-8 {
+        bottom: -56px;
+        right: 16.7%;
     }
 }

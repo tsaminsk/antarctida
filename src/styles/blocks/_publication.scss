@@ -39,22 +39,22 @@
 
     &__slider {
         position: relative;
-    }
 
-    &__slider-outer {
-
+        margin: 0 -14px;
+        // overflow: hidden;
     }
 
     &__slider-inner {
-        display: flex;
-        justify-content: flex-start;
+        position: relative;
     }
 
     &__cart {
-        position: relative;
+        width: 390px;
+        padding: 14px;
+    }
 
-        width: 362px;
-        margin: 0 28px 0 0;
+    &__cart-inner {
+        position: relative;
 
         background-color: $colorWhite;
         box-shadow: 0 0 10px 2px rgba($colorBlue, .15);
@@ -146,26 +146,11 @@
         top: 49%;
 
         &--left {
-            left: -18px;
+            left: -4px;
         }
 
         &--right {
-            right: -18px;
-        }
-    }
-
-    &__icon {
-        position: absolute;
-        z-index: 50;
-
-        &-1 {
-            bottom: 40.5%;
-            right: 23.4%;
-        }
-
-        &-10 {
-            bottom: 30px;
-            left: 7.8%;
+            right: -4px;
         }
     }
 }
