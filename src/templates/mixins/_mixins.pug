@@ -1,0 +1,322 @@
+mixin dmenuItem(name, iconName, active)
+    li(class=(active ? 'header__dmenu-item active' : 'header__dmenu-item'))
+        a(href="javascript:void(0)")
+            .icon(class=`icon-${iconName}`)
+            span= name
+
+mixin headerBlock(nav, current, headerClass)
+    header.header.container
+        .header__mobile
+            .header__mobile-menu
+                a(href="javascript:void(0)").js-mob-menu-open.js_open-menu
+                    .icon.icon-menu
+                    .icon.icon-close
+            .header__mobile-search
+                a(href="javascript:void(0)").js-mob-menu-search
+                    .icon.icon-search
+            .header__mobile-favorites
+                a(href="javascript:void(0)").js-mob-menu-favorites
+                    .icon.icon.icon-like
+        .header__logo
+            a(href="/") Boncupon
+        .header__top
+            ul.header__nav
+                each item in nav
+                    li(class=(item.url === current) ? 'header__nav-link active' : 'header__nav-link')
+                        a(href=item.url)= item.name
+        .header__bottom
+            .header__menu
+                a(href="javascript:void(0)").js_open-menu
+                    .icon.icon-menu
+                    .icon.icon-close
+                    span Каталог
+            .header__search
+                input(type="text" placeholder="Например: аквапарк")
+                .icon.icon-search
+            .header__user.js_open-user-menu
+                .header__user-logo А
+                .header__user-name
+                    span Алеся
+                    .icon.icon-arrow--down
+                .header__user-menu
+                    a(href="/cabinet.html").header__user-menu_link Личный кабинет
+                    a(href="#").header__user-menu_link Избранные
+                    a(href="#").header__user-menu_link Пополнить баланс
+                    a(href="#").header__user-menu_link.js-exit Выйти
+                    .header__user-menu_balans
+                        | Баланс
+                        span 0 BYN
+            .header__user
+                .icon.icon-lock
+                a(href="javascript:void(0)" data-popup="auth").js-open-popup Вход
+                span /
+                a(href="javascript:void(0)" data-popup="reg").js-open-popup Регистрация
+        .header__dropdown.js_dropdown
+            .header__dropdown-title ВСЕ КАТЕГОРИИ
+            .header__dropdown-button
+                .btn.btn-gray.js-open-popup(data-popup="auth") Вход/Регистрация
+                .header__user.js_open-user-menu
+                    .header__user-logo А
+                    .header__user-name
+                        span Алеся
+                        .icon.icon-arrow--down
+                    .header__user-menu
+                        a(href="/cabinet.html").header__user-menu_link Личный кабинет
+                        a(href="#").header__user-menu_link Избранные
+                        a(href="#").header__user-menu_link Пополнить баланс
+                        a(href="#").header__user-menu_link.js-exit Выйти
+                        .header__user-menu_balans
+                            | Баланс
+                            span 0 BYN
+            .header__dropdown-menu
+                .header__dropdown-menu_back
+                    +backButton()
+                ul.header__dmenu
+                    each item in dropdownMenu
+                        +dmenuItem(item.name, item.iconName, item.active)
+                each item in dropdownMenu
+                    .header__dcontent(class=item.active ? 'active' : '' data-category=item.name)
+                        .header__dcontent-block
+                            .header__dcontent-title: a(href="/catalog.html") НОВИНКИ
+                            .header__dcontent-items
+                                p: a(href="/catalog.html") Экстрим <span>(25)</span>
+                                p: a(href="/catalog.html") Водные развлечения <span>(3)</span>
+                                p: a(href="/catalog.html") Экскурсии и путешествия
+                                p: a(href="/catalog.html") Катания и прогулки
+                                p: a(href="/catalog.html") Активные игры
+                        .header__dcontent-block
+                            .header__dcontent-title: a(href="/catalog.html") Популярное
+                            .header__dcontent-items
+                                p: a(href="/catalog.html") Бани и сауны
+                                p: a(href="/catalog.html") Водные развлечения
+                                p: a(href="/catalog.html") Экскурсии и путешествия
+                                p: a(href="/catalog.html") Катания и прогулки
+                                p: a(href="/catalog.html") Активные игры
+                        .header__dcontent-block
+                            .header__dcontent-title: a(href="/catalog.html")=item.name
+                            .header__dcontent-items
+                                p: a(href="/catalog.html") Бани и сауны
+                                p: a(href="/catalog.html") Водные развлечения
+                                p: a(href="/catalog.html") Экскурсии и путешествия
+            .header__dropdown-actions
+                .main-actions__content
+                    .main-actions__info.main-actions__info--img-bg
+                        .main-actions__info-outer
+                        .main-actions__info-inner
+                            .main-actions__info-title ДОБАВИТЬ КУПОН
+                            .main-actions__info-text Станьте участником нашего сервиса, продавайте свои товары и услуги выгодно
+                    +mcart('assets/images/annie.png', 'К НОВОМУ ГОДУ', 'Дарите выгодно!')
+            .header__dropdown-topmenu
+                ul
+                    each item in nav
+                        li
+                            a(href=item.url)= item.name
+            .header__dropdown-footer
+                .header__dropdown-footer_phone
+                    .icon.icon-phone
+                    a(href="tel:+3752123456") +375 25 123 456
+                .header__dropdown-footer_mail
+                    .icon.icon-mail
+                    a(href="mailto:boncupon.info@gmail.com ") boncupon.info@gmail.com
+                .header__dropdown-footer_soc
+                    a(href="#").icon.icon-vk-dark
+                    a(href="#").icon.icon-fsbook-dark
+                    a(href="#").icon.icon-inst-dark
+
+mixin favorites()
+    .favorites
+        .favorites__content.js-favorites-content
+            .favorites__head
+                .favorites__head-title
+                    |Избранные
+                    span (5)
+                    .icon.icon-arrow
+                .favorites__head--clear.js-favorites-clear Очистить
+            .favorites__items
+                .favorites__item
+                    .favorites__item-img(style="background-image: url('assets/images/cartimg.png');")
+                    .favorites__item-description
+                        .favorites__item-title Мастер класс по приготовлению коктелей
+                        .favorites__item-company ‘ООО Алкаш’
+                    .favorites__counter
+                        .favorites__counter_remove &ndash;
+                        .favorites__counter-amount
+                            input(type="text" value="1" name="quantity" readonly)
+                        .favorites__counter_add +
+                    .favorites__item-cost
+                        span 0.99
+                        |byn
+                    .favorites__item-button
+                        .btn.btn-primary Получить купон
+                    .favorites__item-remove
+                        .icon.icon-close.js-favorites-remove
+                .favorites__item
+                    .favorites__item-img(style="background-image: url('assets/images/cartimg.png');")
+                    .favorites__item-description
+                        .favorites__item-title Мастер класс по приготовлению коктелей
+                        .favorites__item-company ‘ООО Алкаш’
+                    .favorites__counter
+                        .favorites__counter_remove &ndash;
+                        .favorites__counter-amount
+                            input(type="text" value="1" name="quantity" readonly)
+                        .favorites__counter_add +
+                    .favorites__item-cost
+                        span 0.99
+                        |byn
+                    .favorites__item-button
+                        .btn.btn-primary Получить купон
+                    .favorites__item-remove
+                        .icon.icon-close.js-favorites-remove
+            .favorites__footer
+                .btn.btn-primary--outline ПЕРЕЙТИ В ИЗБРАННЫЕ
+        a(href="javascript:void(0)").favorites__button.js-favorites-button
+            .favorites__button-title Избранное
+            .favorites__button-icon
+                .icon.icon-like
+            .favorites__button-counts 25
+
+mixin subscription()
+    .subscription.container
+        .subscription__inner
+            .subscription__title НЕ ПРОПУСКАЙТЕ НОВЫЕ АКЦИИ И СКИДКИ
+            .subscription__content
+                form(action="#" method="POST").subscription__form
+                    input(type="text" placeholder="Введите e-mail")
+                    button(type="submit").btn.btn-white--outline Подписаться
+                .subscription__soc
+                    a(href="#").icon.icon-vk
+                    a(href="#").icon.icon-fsbook
+                    a(href="#").icon.icon-inst
+
+mixin mainPopularItem(src, title, text)
+    .main-popular__item
+        .main-popular__item-outer
+            .main-popular__item-inner
+                img(src=src, alt="")
+            a(href="#").main-popular__item-link
+                .main-popular__item-title= title
+                .main-popular__item-text= text
+
+mixin mcart(src, title, text)
+    .mcart.img-scale
+        .mcart-outer
+            .mcart-inner
+                img(src=src, alt="")
+            a(href="#").mcart-link
+                .mcart-title= title
+                .mcart-text= text
+
+mixin select(name, items)
+    .select
+        .select__name
+            .icon.icon-arrow--down
+            .select__name-text= name
+        .select__body
+            each item in items
+                .select__item= item
+
+mixin cart(title = 'Мастер класс по приготовлению коктелей')
+    .cart.img-scale
+        a(href="/detail.html").cart__inner
+            .cart__image
+                .cart__image-wrap
+                    img(src="assets/images/cartimg.png", alt="")
+                .cart__head
+                    .cart__discount: span -15%
+                    .cart__like
+                        .icon.icon-dark-heart
+            .cart__content
+                .cart__title= title
+                .cart__price
+                    .cart__price-old 156 BYN
+                    .cart__price-new Цена со скидкой: 100 BYN
+                .cart__footer
+                    .cart__address СКРИПНИКОВА 1
+                    .cart__stars
+                        span 2
+                        .icon.icon-star
+mixin cartBannerDark()
+    .cart.cart--dark
+        .cart__inner
+            .cart__title ХОТИТЕ РАЗМЕСТИТЬ ЗДЕСЬ СВОЮ АКЦИЮ?
+            a.cart__subtitle(href="/about.html#place") ДА, как это сделать?
+
+mixin breadCrumbs(navs)
+    .container
+        nav.breadcrumbs
+            ol
+                each item, i in navs
+                    if (i != navs.length - 1)
+                        li.breadcrumbs-item: a(href=item.link)= item.name
+                    else
+                        li.breadcrumbs-item.active= item.name
+        //- nav.back
+        //-     .back-icon
+        //-     .back-link Назад
+
+mixin backButton(className)
+    nav.back(class=className)
+        .back-icon
+        .back-link Назад
+
+mixin mainDetailSlider(calssNameJs)
+    .main-detail__slider(class=calssNameJs)
+        .main-detail__slider-outer
+            .main-detail__slider-inner
+                .main-detail__slider-items(data-slider="body")
+                    .main-detail__slider-item
+                        .main-detail__slider-item_image
+                            img(src="assets/images/kate.png", alt="")
+                    .main-detail__slider-item
+                        .main-detail__slider-item_image
+                            img(src="assets/images/helena.jpg", alt="")
+                    .main-detail__slider-item
+                        .main-detail__slider-item_image
+                            img(src="assets/images/annie.png", alt="")
+            .main-detail__slider-discount: span -15%
+        .main-detail__slider-pagination(data-slider="pagination")
+            .main-detail__slider-pagination_item.active(style="background-image: url(assets/images/kate.png);")
+            .main-detail__slider-pagination_item(style="background-image: url(assets/images/helena.jpg);")
+            .main-detail__slider-pagination_item(style="background-image: url(assets/images/annie.png);")
+        .main-detail__slider-arrow_left(data-toggle="-1")
+        .main-detail__slider-arrow_right.active(data-toggle="1")
+
+//- карточка отзыв юзера
+mixin rewiewsItem(name)
+    .rewiews-item
+        .rewiews-item__user-icon
+            .rewiews-item__user-icon_inner
+                img(src="assets/images/user.jpg" alt="")
+        .rewiews-item__content
+            .rewiews-item__head
+                .rewiews-item__user-name= name
+                .rewiews-item__data 05.10.2015
+            .rewiews-item__post
+                | Отвратительные коктели, везде замешивали только водку, которая походу была разбавлена. Никому не понравилась отвертка, потому что сок кончился, и использовали пюре яблочное детское. Было ужасно. В руки вам насрать!!!
+            .rewiews-item__rating
+                .icon.icon-star
+                .icon.icon-star
+                .icon.icon-star
+                .icon.icon-star
+                .icon.icon-star
+                span 5.0
+
+//- катрочка компании (детальная - адреса)
+mixin addressCart()
+    .address-cart
+        .address-cart__logo
+            .address-cart__logo-inner
+                img(src="assets/images/logo-company.jpg" alt="")
+        .address-cart__content
+            .address-cart__content-title Мобильный салон красоты "GOOD ЛАК"
+            .address-cart__content-name УНП 193074934 ИП Унучек Т.П.
+            .address-cart__content-description
+                p Минск
+                p пн-пт: с 10:00 до 18:00, сб-вс: выходные
+                p +7 (499) 113-01-39
+
+//- банер в раздел категории (каталог)
+mixin banner(title)
+    .container
+        .banner
+            .banner-title= title

@@ -1,0 +1,109 @@
+.banner {
+    position: relative;
+
+    padding: 43.35% 0 0;
+    overflow: hidden;
+
+    background: url('../../assets/images/banner_bg.png') center center no-repeat;
+    background-size: cover;
+
+    &__overlay {
+        background: url('../../assets/images/towers.png') center center no-repeat;
+        background-size: cover;
+        opacity: 0;
+
+        animation: show 8s $easeOutExpo;
+        animation-delay: 3s;
+        animation-fill-mode: forwards;
+    }
+
+    &__paralax {
+        top: 65%;
+
+        background: url('../../assets/images/busch_bg_1.png') 16% 46% no-repeat, url('../../assets/images/busch_bg_2.png') 7.1% 32% no-repeat, url('../../assets/images/busch_bg_1.png') 84% 35% no-repeat;
+        // background-size: 100% auto;
+    }
+
+    &__content {
+        display: flex;
+        align-items: center;
+        padding: 10px 0 0;
+    }
+
+    &__title {
+        padding: 0 76px 0 0;
+
+        h1 {
+            font-size: 72px;
+            color: $colorWhite;
+
+            @include openSansCond(700);
+        }
+    }
+
+    &__description {
+        width: 365px;
+        height: 70px;
+        padding: 1px 0 2px 27px;
+        margin: 0 42px 0 0;
+
+        border-left: 1px solid $colorBlue;
+
+        font-size: 19px;
+        line-height: 25px;
+        color: $colorWhite;
+
+        @include montserrat(700);
+    }
+
+    &__message {
+        position: relative;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 116px;
+        height: 116px;
+        padding: 4px 0 0;
+
+        border-radius: 50%;
+        border: 1px solid rgba($colorWhite, .5);
+        transform: translate3d(0, 5px, 0);
+    }
+
+    &__message-decor {
+        position: absolute;
+        top: 14px;
+        left: 14px;
+
+        width: 86px;
+        height: 86px;
+
+        border-radius: 50%;
+        border: 1px solid rgba($colorWhite, .5);
+
+        animation-name: rotation;
+        animation-duration: 6s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 8px;
+            left: 8px;
+
+            width: 8px;
+            height: 8px;
+
+            border-radius: 50%;
+            background-color: $colorWhite;
+            box-shadow: 0 0 6px 2px rgba($colorWhite, 1);
+        }
+    }
+
+    &__message-icon {
+        transform: translate3d(5px, 0, 0);
+        cursor: pointer;
+    }
+}

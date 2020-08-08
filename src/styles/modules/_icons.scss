@@ -1,0 +1,147 @@
+@import '_sprite';
+
+.icon {
+    display: inline-block;
+
+    vertical-align: top;
+}
+
+.icon-eis-1 {
+    @include sprite($eis-1);
+}
+
+.icon-eis-2 {
+    @include sprite($eis-2);
+}
+
+.icon-eis-3 {
+    @include sprite($eis-3);
+}
+
+.icon-eis-4 {
+    @include sprite($eis-4);
+}
+
+.icon-eis-5 {
+    @include sprite($eis-5);
+}
+
+.icon-eis-6 {
+    @include sprite($eis-6);
+}
+
+.icon-eis-7 {
+    @include sprite($eis-7);
+}
+
+.icon-eis-8 {
+    @include sprite($eis-8);
+}
+
+.icon-eis-9 {
+    @include sprite($eis-9);
+}
+
+.icon-eis-10 {
+    @include sprite($eis-10);
+}
+
+.icon-pinguin {
+    cursor: pointer;
+
+    will-change: transform;
+
+    @include sprite($pinguin);
+
+    &:hover {
+        transform: scale(-1, 1);
+    }
+}
+
+.icon-menu {
+    @include sprite($menu);
+}
+
+.icon-message {
+    @include sprite($message);
+}
+
+.icon-services-1 {
+    @include sprite($services-1);
+}
+
+.icon-services-2 {
+    @include sprite($services-2);
+}
+
+.icon-services-3 {
+    @include sprite($services-3);
+}
+
+.icon-stamp {
+    @include sprite($stamp);
+}
+
+.icon-step-1 {
+    @include sprite($step-1);
+}
+
+.icon-step-2 {
+    @include sprite($step-2);
+}
+
+.icon-step-3 {
+    @include sprite($step-3);
+}
+
+.icon-step-4 {
+    @include sprite($step-4);
+}
+
+.icon-step-5 {
+    @include sprite($step-5);
+}
+
+.icon-step-6 {
+    @include sprite($step-6);
+}
+
+.icon-step-7 {
+    @include sprite($step-7);
+}
+
+.icon-step-8 {
+    @include sprite($step-8);
+}
+
+.icon-step-9 {
+    @include sprite($step-9);
+}
+
+.icon-step-10 {
+    @include sprite($step-10);
+}
+
+.icon-step-11 {
+    @include sprite($step-11);
+}
+
+.icon-simbol {
+    @include sprite($simbol);
+}
+
+.icon-tablet {
+    @include sprite($tablet);
+}
+
+.icon-arrow {
+    @include sprite($arrow);
+}
+
+.icon-vybor-a {
+    @include sprite($vybor-a);
+}
+
+.icon-litle-a {
+    @include sprite($litle-a);
+}

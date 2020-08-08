@@ -1,0 +1,176 @@
+.technology {
+
+    &__body {
+        position: relative;
+        z-index: 2;
+
+        padding: 0 0 20px;
+        margin: 0 0 -220px;
+
+        background: rgba($colorBlue, .5);
+        clip-path: polygon(0 0, 100% 0, 100% 82%, 50% 100%, 0 82%);
+    }
+
+    &__body-bg {
+        padding: 81px 0 14px;
+
+        background: $colorWhite url('../../assets/images/technology_bg.png') center center no-repeat;
+        background-size: cover;
+
+        clip-path: polygon(0 0, 100% 0, 100% 82%, 50% 100%, 0 82%);
+    }
+
+    &__head {
+        display: flex;
+        justify-content: space-between;
+        margin: 0 0 26px;
+    }
+
+    &__title {
+        padding: 5px 0 0;
+
+        h2 {
+            font-size: 40px;
+            color: $colorBlue;
+
+            @include openSansCond(200);
+
+            b {
+                font-weight: 700;
+            }
+        }
+    }
+
+    &__head-link {
+        width: 388px;
+        padding: 12px 15px 18px;
+
+        background-color: $colorWhite;
+        box-shadow: 0 0 20px 4px rgba($colorBlue, .2);
+        border-left: 4px solid $colorBlue2;
+
+        font-size: 17px;
+        line-height: 24.29px;
+
+        a {
+            color: $colorBlue4;
+            text-decoration: none;
+
+            @include montserrat(700);
+        }
+
+        span {
+            color: $colorGray;
+
+            @include montserrat(400);
+        }
+    }
+
+    &__content {
+        display: flex;
+        justify-content: flex-start;
+        margin: 0 0 28px;
+    }
+
+    &__video {
+        padding: 3px 0 0;
+        margin: 0 29px 0 0;
+
+        video {
+            width: 752px;
+            height: 422px;
+        }
+    }
+
+    &__description {
+        padding: 0 3px 0 0;
+
+        p {
+            margin: 0 0 27px;
+
+            font-size: 17px;
+            line-height: 24.29px;
+            color: $colorGray;
+
+            @include montserrat(400);
+        }
+    }
+
+    &__footer {
+        display: flex;
+        justify-content: flex-end;
+        margin: 0 0 64px;
+    }
+
+    &__footer-wrapper {
+        display: flex;
+
+        box-shadow: 0 0 20px 4px rgba($colorBlue, .3);
+    }
+
+    &__footer-title {
+        width: 443px;
+        height: 101px;
+        padding: 24px 0 0 40px;
+
+        background-color: $colorWhite;
+
+        p {
+            display: inline-block;
+            padding: 0 0 0 26px;
+
+            border-left: 1px solid #80DFFE;
+
+            font-size: 17px;
+            line-height: 24.29px;
+            color: $colorGray;
+
+            @include montserrat(400);
+        }
+    }
+
+    &__footer-link {
+        position: relative;
+
+        width: 265px;
+        height: 101px;
+        padding: 35px 0 0 32px;
+
+        background-color: $colorBlue2;
+
+        a {
+            color: $colorWhite;
+            font-size: 20px;
+            text-transform: uppercase;
+            text-decoration: none;
+
+            @include openSansCond(700);
+        }
+    }
+
+    &__footer-icon {
+        position: absolute;
+        top: -26px;
+        right: -32px;
+    }
+
+    &__map {
+        position: relative;
+        z-index: 1;
+
+        padding: 41.15% 0 0;
+    }
+
+    &__map-title {
+        padding: 0 0 91px 19px;
+
+        text-align: center;
+
+        h2 {
+            font-size: 40px;
+            color: $colorBlue;
+
+            @include openSansCond(700);
+        }
+    }
+}

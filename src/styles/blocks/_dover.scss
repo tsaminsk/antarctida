@@ -1,0 +1,100 @@
+.dover {
+    position: relative;
+
+    &__wrapper {
+        position: absolute;
+        z-index: 4;
+        top: -84px;
+        left: 50%;
+
+        display: flex;
+        width: 1140px;
+        height: 181px;
+
+        transform: translate3d(-50%, 0, 0);
+        background-color: $colorWhite;
+        box-shadow: 0 0 20px 4px rgba($colorBlue, .3);
+    }
+
+    &__head {
+        display: flex;
+    }
+
+    &__head-title {
+        padding: 54px 0 0 52px;
+
+        font-size: 24px;
+        line-height: 33.24px;
+        color: $colorGray;
+
+        @include openSansCond(700);
+    }
+
+    &__slider {
+        flex: 1;
+        height: 100%;
+    }
+
+    &__slider-outer {
+        height: 100%;
+        padding: 16px 10px 0 0;
+        overflow: hidden;
+    }
+
+    &__slider-inner {
+        display: flex;
+        align-items: center;
+        height: 140px;
+        padding: 8px 0 0;
+    }
+
+    &__slider-item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 184px;
+        height: 81px;
+    }
+
+    &__slider-scrolling {
+        height: 30px;
+        padding: 0 10px 0 0;
+    }
+
+    &__slider-scrolling--body {
+        position: relative;
+
+        width: 865px;
+        height: 5px;
+        margin: 0 auto;
+
+        background: $colorGray3;
+        border-radius: 3px;
+    }
+
+    &__slider-scrolling--runner {
+        position: absolute;
+        top: -1px;
+        left: 0;
+
+        width: 124px;
+        height: 5px;
+
+        cursor: pointer;
+        background-color: $colorBlue4;
+        border-radius: 3px;
+    }
+
+    &__slider-arrow {
+        position: absolute;
+        top: 72px;
+
+        &--left {
+            left: -16px;
+        }
+
+        &--right {
+            right: -13px;
+        }
+    }
+}

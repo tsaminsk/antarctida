@@ -1,0 +1,36 @@
+section.contacts
+    .container
+        .contacts__head
+            .contacts__title
+                h2 КОНТАКТНАЯ ИНФОРМАЦИЯ
+            .contacts__button.js-contacts-map-open Развернуть карту
+        form.contacts__form(autocomplete="off")
+            .contacts__form-title
+                h2 ОСТАЛИСЬ ВОПРОСЫ?
+            .contacts__form-subtitle Остались какие-либо вопросы, напишите нам, и мы на них ответим
+            .contacts__form-row
+                input(type="text" name="contacts-form-name" id="contacts-form-name" placeholder="Ваше имя")
+                input(type="tel" name="contacts-form-phone" id="contacts-form-phone" placeholder="Телефон")
+            .contacts__form-row
+                textarea(type="text" name="contacts-form-message" id="contacts-form-message" placeholder="Ваш вопрос")
+            .contacts__form-footer
+                .contacts__form-notes Нажимая кнопку, вы соглашаетесь с политикой конфиденциальности и на обработку персональных данных
+                button(type="submit").btn.btn-outer.btn-white.btn-big ОТПРАВИТЬ ЗАЯВКУ
+    .contacts__content.js-contacts-map-wrapper
+        .contacts__content-close.js-contacts-map-close
+            <svg viewBox="0 0 24 24">
+                <path d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z" />
+            </svg>
+        .contacts__info
+            .contacts__info-inner
+                a.contacts__info-phone(href="tel:+73012501818") +7 (301) 250 18 18
+                .contacts__info-address
+                    |670000, Россия, Респ. Бурятия, <br>
+                    |УЛАН-УДЭ, ул. Свердлова, 6В <br>
+                    a.contacts__info-mail(href="mailto:info@antarktida.su ") info@antarktida.su<br>
+                    |пн-пт с 9:00 до 18:00 <br>
+        .contacts__map
+            //- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1233.0141143589783!2d107.58091624092616!3d51.823914796749264!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5dafdb4ca1e22c8f%3A0x7b3ed54ac2d6e864!2z0YPQuy4g0KHQstC10YDQtNC70L7QstCwLCA20LIsINCj0LvQsNC9LdCj0LTRjSwg0KDQtdGB0L8uINCR0YPRgNGP0YLQuNGPLCDQoNC-0YHRgdC40Y8sIDY3MDAwMA!5e0!3m2!1sru!2sby!4v1596872339327!5m2!1sru!2sby" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+            <div id="map" class="contacts__map-wrapper"></div>
+            //- img(src="assets/images/contacts_map.jpg", alt="")
+    include ./_footer

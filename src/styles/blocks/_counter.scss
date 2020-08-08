@@ -1,0 +1,117 @@
+.counter {
+    position: relative;
+
+    min-height: 418px;
+
+    background: url('../../assets/images/counter_bg.jpg') center center no-repeat;
+    background-size: cover;
+
+    &::before {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        content: '';
+
+        width: 100%;
+        height: 0;
+
+        box-shadow: 0 -5px 15px 5px rgba($colorBlue, .6);
+    }
+
+    &__title {
+        padding: 75px 0 57px;
+
+        h2 {
+            font-size: 40px;
+            // letter-spacing: .01px;
+            color: $colorBlue;
+
+            @include openSansCond(200);
+
+            b {
+                letter-spacing: normal;
+
+                @include openSansCond(700);
+            }
+        }
+    }
+
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 20px 0 9px;
+    }
+
+    &__item {
+        display: flex;
+        margin: 0 18px 0 0;
+
+        &:nth-child(2) .counter__item-text::before {
+            right: 18px;
+        }
+
+        &:nth-child(3) .counter__item-text::before {
+            right: -6px;
+        }
+    }
+
+    &__item-amount {
+        display: inline-block;
+        margin: 0 20px 0 0;
+
+        vertical-align: top;
+        font-size: 92px;
+        line-height: 1;
+        color: $colorBlue;
+
+        @include openSansCond(700);
+    }
+
+    &__item-text {
+        position: relative;
+
+        max-width: 150px;
+        padding: 7px 0 0;
+
+        font-size: 17px;
+        line-height: 24px;
+        color: $colorGray;
+
+        @include montserrat(400);
+
+        &::before {
+            position: absolute;
+            top: 4px;
+            right: 17px;
+            content: '';
+
+            width: 7px;
+            height: 7px;
+
+            border-radius: 50%;
+            background-color: $colorBlue2;
+        }
+    }
+
+    &__icon {
+        position: absolute;
+        z-index: 10;
+
+        &-1 {
+            top: -40px;
+            right: 21%;
+        }
+
+        &-2 {
+            top: 16%;
+            left: 60.5%;
+
+            transform: scale(.65);
+        }
+
+        &-3 {
+            bottom: -62px;
+            left: 16%;
+        }
+    }
+}

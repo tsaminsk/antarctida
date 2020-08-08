@@ -1,0 +1,125 @@
+.services {
+    position: relative;
+    z-index: 3;
+
+    margin: 0 0 -200px;
+
+    background: url('../../assets/images/services_bg.png') center center no-repeat;
+    background-size: 100% 100%;
+
+    &__inner {
+        padding: 108px 0 105px;
+    }
+
+    &__subtitle {
+        padding: 0 24px 0 48%;
+        margin: 0 0 103px;
+
+        text-align: right;
+
+        span {
+            display: inline-block;
+            padding: 0 0 0 105px;
+
+            vertical-align: top;
+            font-size: 17px;
+            line-height: 24.29px;
+            color: $colorGray;
+            text-align: left;
+
+            @include montserrat(400);
+        }
+    }
+
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 0 0 101px;
+    }
+
+    &__item {
+        width: 300px;
+
+        &:first-child .services__item-icon .icon {
+            transform: translate3d(-59px, 0, 0);
+        }
+
+        &:nth-child(2) .services__item-list li::before {
+            box-shadow: 0 0 12px 4px rgba($colorBlue, .6);
+        }
+    }
+
+    &__item-icon {
+        margin: 0 auto 31px;
+
+        text-align: center;
+    }
+
+    &__item-title {
+        padding: 0 0 50px 0;
+
+        font-size: 37px;
+        color: $colorWhite;
+        text-transform: uppercase;
+
+        @include openSansCond(700);
+
+        &--dark {
+            color: $colorBlue;
+        }
+    }
+
+    &__item-list {
+        padding: 0 0 57px;
+
+        list-style: none;
+
+        li {
+            position: relative;
+
+            padding: 0 0 18px 32px;
+
+            font-size: 16px;
+            line-height: 19.5px;
+            color: $colorGrayLight;
+
+            @include montserrat(700);
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: 8px;
+                left: 8px;
+
+                width: 4px;
+                height: 4px;
+
+                border-radius: 50%;
+                background-color: $colorWhite;
+                box-shadow: 0 0 12px 4px rgba($colorWhite, .6);
+            }
+        }
+
+        &--dark li {
+            color: $colorGray2;
+        }
+    }
+
+    &__arrow {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+
+        transform: translate3d(-50%, 50%, 0);
+    }
+
+    &__icon {
+        position: absolute;
+        z-index: 10;
+
+        &-6 {
+            bottom: 53px;
+            right: 20%;
+        }
+    }
+}

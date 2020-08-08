@@ -1,0 +1,249 @@
+.contacts {
+    position: relative;
+
+    padding: 54px 0 0;
+
+    background: url('../../assets/images/contacts_bg.jpg') center center no-repeat;
+    background-size: cover;
+
+    &__head {
+        position: relative;
+    }
+
+    &__button {
+        position: absolute;
+        top: 14px;
+        right: 67px;
+
+        padding: 0 4px 3px 0;
+
+        cursor: pointer;
+        border-bottom: 2px solid #6E9AD5;
+
+        font-size: 13px;
+        color: $colorBlack2;
+
+        @include montserrat(700);
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: -14px;
+            left: -59px;
+
+            width: 45px;
+            height: 45px;
+            overflow: hidden;
+
+            border-radius: 50%;
+            background-image: radial-gradient(closest-side, rgba($colorWhite, .4) 15%, rgba($colorWhite, .15) 15%, rgba($colorWhite, .15) 60%, rgba($colorWhite, .05) 60%, rgba($colorWhite, .05) 100%);
+        }
+    }
+
+    &__title {
+        padding: 0 6px 0 0;
+        margin: 0 0 364px;
+
+        h2 {
+            font-size: 40px;
+            color: $colorWhite;
+            text-align: center;
+
+            @include openSansCond(700);
+        }
+    }
+
+    &__form {
+        width: 912px;
+        padding: 126px 83px 47px 115px;
+        margin: 0 auto 63px;
+
+        background-color: rgba(#001A48, .85);
+    }
+
+    &__form-title {
+        padding: 0 65px 20px 0;
+
+        h2 {
+            font-size: 40px;
+            color: $colorWhite;
+            text-align: center;
+
+            @include openSansCond(700);
+        }
+    }
+
+    &__form-subtitle {
+        padding: 0 51px 9px 0;
+
+        font-size: 16px;
+        color: $colorWhite;
+        text-align: center;
+
+        @include montserrat(400);
+    }
+
+    &__form-row {
+        display: flex;
+        justify-content: space-between;
+        margin: 20px 0 27px;
+
+        input,
+        textarea {
+            width: 340px;
+            height: 65px;
+            padding: 24px 0;
+
+            border: none;
+            outline: none;
+            border-bottom: 2px solid $colorLightBlue;
+            background: none;
+
+            font-size: 17px;
+            color: $colorWhite;
+
+            @include montserrat(400);
+
+            &::placeholder {
+                color: $colorWhite;
+            }
+        }
+
+        textarea {
+            width: 100%;
+            height: 61px;
+            padding: 20px 0;
+            resize: none;
+        }
+    }
+
+    &__form-footer {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__form-notes {
+        max-width: 300px;
+
+        font-size: 12px;
+        line-height: 14.62px;
+        color: $colorWhite;
+
+        @include montserrat(400);
+    }
+
+    &__content {
+        position: absolute;
+        top: 174px;
+        left: 50%;
+
+        width: 1146px;
+        height: 372px;
+
+        box-shadow: 0 0 15px 5px rgba($colorBlue, .5);
+        transform: translate3d(-50%, 0, 0);
+
+        &.is-open {
+            position: fixed;
+            z-index: 20;
+            top: 0;
+            left: 0;
+
+            width: 100vw;
+            height: 100vh;
+            padding: 100px;
+
+            background-color: rgba($colorBlueDark, .75);
+
+            transform: translate3d(0, 0, 0);
+
+            .contacts__info {
+                display: none;
+            }
+
+            .contacts__map {
+                background-color: $colorWhite;
+            }
+
+            .contacts__content-close {
+                position: absolute;
+                top: 30px;
+                right: 30px;
+
+                display: inline-block;
+
+                opacity: 1;
+                cursor: pointer;
+
+                vertical-align: top;
+
+                transition: opacity .3s ease-out;
+
+                svg {
+                    width: 36px;
+                    height: 36px;
+
+                    fill: $colorWhite;
+                }
+
+                &:hover {
+                    opacity: .85;
+                }
+            }
+        }
+    }
+
+    &__content-close {
+        display: none;
+    }
+
+    &__info {
+        position: absolute;
+        z-index: 2;
+        top: -24px;
+        left: 70px;
+
+        width: 339px;
+        padding: 32px 29px 29px;
+
+        background-color: $colorWhite;
+    }
+
+    &__info-inner {
+        padding: 0 0 12px 23px;
+
+        border-left: 2px solid $colorLightBlue2;
+    }
+
+    &__info-phone {
+        display: block;
+        margin: 0 0 23px;
+
+        font-size: 25px;
+        color: $colorBlue;
+        text-decoration: none;
+
+        @include montserrat(700);
+    }
+
+    &__info-address,
+    &__info-address a {
+        font-size: 15px;
+        line-height: 20.56px;
+        color: $colorBlack2;
+        text-decoration: none;
+
+        @include montserrat(400);
+    }
+
+    &__map,
+    &__map-wrapper {
+        width: 100%;
+        height: 100%;
+
+        iframe {
+            width: 100%;
+            height: 100%;
+        }
+    }
+}

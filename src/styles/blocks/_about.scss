@@ -1,0 +1,158 @@
+.about {
+    position: relative;
+    z-index: 2;
+
+    padding: 260px 0 27px;
+
+    background: url('../../assets/images/about_bg.jpg') center center no-repeat;
+    background-size: 100% 100%;
+
+    &__title {
+        padding: 0 0 0 7px;
+
+        h2 {
+            padding: 0;
+            margin: 0;
+
+            font-size: 40px;
+            color: $colorBlue;
+
+            @include openSansCond(200);
+
+            b {
+                display: inline-block;
+
+                transform: translate3d(-8px, 0, 0);
+
+                @include openSansCond(700);
+            }
+        }
+    }
+
+    &__content {
+        position: relative;
+
+        // height: 721px;
+        padding: 98px 0 0 517px;
+    }
+
+    &__image {
+        position: absolute;
+        z-index: 2;
+        top: 30px;
+        left: -1px;
+
+        width: 510px;
+        height: 721px;
+    }
+
+    &__description {
+        margin: 0 0 73px;
+    }
+
+    &__quote {
+        position: relative;
+        z-index: 2;
+
+        width: 622px;
+        margin: 0 0 80px;
+
+        font-size: 24px;
+        line-height: 33.64px;
+        color: $colorGray;
+
+        @include montserrat(700);
+
+        &::before {
+            content: '"';
+            position: absolute;
+            z-index: -1;
+
+            top: 46px;
+            left: -97px;
+
+            font-size: 282px;
+            color: $colorBlue2;
+
+            @include openSansCond(700);
+        }
+    }
+
+    &__text {
+        position: relative;
+
+        padding: 0 0 10px;
+        margin: 0 0 52px 39px;
+
+        font-size: 17px;
+        line-height: 24.29px;
+        color: $colorGray;
+
+        @include montserrat(400);
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: -7px;
+            left: -39px;
+
+            width: 5px;
+            height: 132px;
+
+            background-color: $colorBlue;
+        }
+    }
+
+    &__author {
+        position: relative;
+        z-index: 1;
+
+        width: 627px;
+        padding: 29px 82px 45px;
+
+        background-color: $colorWhite;
+        transform: translate3d(-45px, 0, 0);
+    }
+
+    &__author-name {
+        margin: 0 0 14px;
+
+        font-size: 27px;
+        letter-spacing: -.2px;
+        color: $colorGray;
+
+        @include openSansCond(700);
+    }
+
+    &__author-position {
+        padding: 0 20px 0 0;
+
+        font-size: 17px;
+        line-height: 24.29px;
+        letter-spacing: -.2px;
+        color: $colorGray;
+
+        @include montserrat(400);
+    }
+
+    &__author-icon {
+        position: absolute;
+        top: 10px;
+        right: -57px;
+    }
+
+    &__icon {
+        position: absolute;
+        z-index: 10;
+
+        &-7 {
+            top: 37.5%;
+            left: 17.4%;
+        }
+
+        &-6 {
+            bottom: -22px;
+            right: 33.4%;
+        }
+    }
+}

@@ -1,0 +1,71 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 42px 0 30px;
+
+    &__logotip {
+        position: relative;
+
+        padding: 0 0 0 42px;
+    }
+
+    &__icon {
+        width: 27px;
+        padding: 5px 0 0;
+        margin: -1px 0 0;
+    }
+
+    &__title {
+        font-size: 34px;
+        letter-spacing: 4.5px;
+        color: $colorLightBlue;
+
+        @include openSansCond(700);
+    }
+
+    &__slogan {
+        font-size: 14px;
+        letter-spacing: 2.4px;
+        color: $colorWhite;
+        text-transform: uppercase;
+
+        @include openSansCond(600);
+    }
+
+    &__main {
+        display: flex;
+        align-items: center;
+    }
+
+    &__phone {
+        padding: 0 0 8px;
+
+        font-size: 27px;
+        color: $colorWhite;
+        text-decoration: none;
+
+        @include openSansCond(700);
+    }
+
+    &__button {
+        padding: 0 0 8px;
+        margin: 0 18px 0 24px;
+    }
+
+    &__menu {
+        padding: 0 0 9px;
+
+        cursor: pointer;
+
+        font-size: 12px;
+        color: $colorYellow2;
+
+        @include montserrat(700);
+
+        .icon {
+            margin: -1px 9px 0 0;
+        }
+    }
+}

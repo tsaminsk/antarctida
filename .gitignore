@@ -1,0 +1,7 @@
+node_modules
+
+gulpfile.js
+
+# ide and editor
+.idea
+.vscode

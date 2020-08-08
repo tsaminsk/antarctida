@@ -1,0 +1,45 @@
+.arrow {
+    position: relative;
+
+    width: 32px;
+    height: 32px;
+
+    border-radius: 50%;
+    background-color: $colorYellow2;
+    box-shadow: 0 0 15px 5px rgba($colorYellow2, .5);
+    cursor: pointer;
+
+    transition: opacity .3s ease-out;
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+
+        width: 0;
+        height: 0;
+
+        transform: translate3d(-50%, -65%, 0);
+
+        border-left: 4px solid transparent;
+        border-right: 4px solid transparent;
+        border-bottom: 6px solid $colorWhite;
+    }
+
+    &:hover {
+        opacity: .85;
+    }
+
+    &-left {
+        transform: rotate(-90deg);
+    }
+
+    &-right {
+        transform: rotate(90deg);
+    }
+
+    &-bottom {
+        transform: rotate(180deg);
+    }
+}

@@ -1,0 +1,82 @@
+html {
+    box-sizing: border-box;
+
+    font-size: 16px;
+
+    // @include roboto(400);
+}
+
+body {
+    position: relative;
+}
+
+div,
+section {
+    box-sizing: border-box;
+}
+
+h2 {
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    width: rem($desktops);
+    margin: 0 auto;
+}
+
+.posa {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+}
+
+.rotate180 {
+    transform: rotate(180deg);
+}
+
+.mirror-h {
+    transform: scale(1, -1);
+}
+
+.img-scale {
+
+    img {
+        transform: scale(1) translate3d(0, 0, 0);
+
+        transition: transform 60s .25s $easeOutExpo;
+    }
+
+    &:hover img {
+        transform: scale(1.2) translate3d(0, 0, 0);
+    }
+}
+
+.ymaps-layers-pane {
+    filter: brightness(50%);
+}
+
+@keyframes show {
+
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes rotation {
+
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}

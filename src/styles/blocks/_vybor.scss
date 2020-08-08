@@ -1,0 +1,130 @@
+.vybor {
+    position: relative;
+
+    padding: 0 0 420px;
+    overflow: hidden;
+
+    background: $colorBlueDark;
+
+    &__wrapp {
+        padding: 167px 0 0;
+
+        background: url('../../assets/images/vybor_bg.png') center center no-repeat;
+        background-size: cover;
+    }
+
+    &__head {
+        position: relative;
+    }
+
+    &__head-simbol {
+        position: absolute;
+        top: -288px;
+        right: -150px;
+    }
+
+    &__title {
+        margin: 0 0 11px;
+
+        h2 {
+            font-size: 40px;
+            color: $colorWhite;
+            text-align: center;
+
+            @include openSansCond(700);
+        }
+    }
+
+    &__subtitle {
+        text-align: center;
+
+        span {
+            position: relative;
+
+            display: inline-block;
+
+            font-size: 17px;
+            line-height: 1;
+            color: $colorBlue5;
+
+            @include montserrat(700);
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: 4px;
+                left: -20px;
+
+                width: 7px;
+                height: 7px;
+
+                border-radius: 50%;
+                background-color: $colorBlue2;
+            }
+        }
+    }
+
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        padding: 58px 0 50px 20px;
+    }
+
+    &__col {
+        width: 33.33%;
+    }
+
+    &__article {
+        padding: 0 40px 0 0;
+        margin: 0 0 68px;
+    }
+
+    &__article-title {
+        position: relative;
+
+        margin: 0 0 23px;
+
+        font-size: 19px;
+        line-height: 26.16px;
+        color: $colorBlue5;
+
+        @include montserrat(700);
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 8px;
+            left: -27px;
+
+            width: 9px;
+            height: 9px;
+
+            border-radius: 50%;
+            background-color: $colorWhite;
+            box-shadow: 0 0 19px 5px rgba($colorWhite, .6);
+        }
+    }
+
+    &__article-text {
+        font-size: 19px;
+        line-height: 26.16px;
+        color: $colorWhite;
+
+        @include montserrat(400);
+    }
+
+    &__icon {
+        position: absolute;
+        z-index: 10;
+
+        &-2 {
+            top: 4.5%;
+            left: 23.4%;
+        }
+
+        &-9 {
+            top: 30.2%;
+            left: 7.8%;
+        }
+    }
+}

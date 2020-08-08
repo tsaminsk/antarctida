@@ -1,0 +1,75 @@
+.reviews {
+    position: relative;
+    z-index: 4;
+
+    padding: 50px 0 400px;
+    margin: -500px 0 -825px;
+
+    background: url('../../assets/images/reviews_bg.png') center center no-repeat;
+    background-size: cover;
+
+    &__title {
+        padding: 0 31px 0 0;
+        margin: 0 0 34px;
+
+        h2 {
+            font-size: 40px;
+            color: $colorWhite;
+            text-align: center;
+
+            @include openSansCond(700);
+        }
+    }
+
+    &__slider {
+        position: relative;
+    }
+
+    &__slider-outer {
+        margin: 0 -10px;
+    }
+
+    &__slider-inner {
+        display: flex;
+    }
+
+    &__card {
+        width: 273px;
+        height: 374px;
+        padding: 5px;
+        margin: 0 10px;
+        overflow: hidden;
+
+        background-color: rgba($colorWhite, .2);
+        backdrop-filter: blur(2px);
+        cursor: pointer;
+    }
+
+    &__card-image {
+        position: relative;
+
+        width: 100%;
+        height: 100%;
+
+        img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+
+            transform: translate3d(-50%, -50%, 0);
+        }
+    }
+
+    &__slider-arrow {
+        position: absolute;
+        top: 46.8%;
+
+        &--left {
+            left: -16px;
+        }
+
+        &--right {
+            right: -16px;
+        }
+    }
+}
