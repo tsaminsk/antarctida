@@ -1,0 +1,362 @@
+.popup {
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+
+    display: none;
+    width: 100%;
+    height: 100%;
+
+    &.is-open {
+        display: block;
+
+        animation: show .3s;
+    }
+
+    &__outer {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        padding: 100px 0;
+        overflow-y: auto;
+
+        background-color: rgba($colorGray3, .75);
+    }
+
+    &__close {
+        position: absolute;
+        top: 18px;
+        right: 15px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 44px;
+        height: 44px;
+
+        border-radius: 50%;
+        background-color: $colorLightBlue;
+
+        opacity: 1;
+        cursor: pointer;
+
+        transition: opacity .3s ease-out, box-shadow .3s ease-out;
+
+        @include mq(1023) {
+            top: 12px;
+            right: 12px;
+        }
+
+        @include mq(767) {
+            width: 30px;
+            height: 30px;
+        }
+
+        svg {
+            width: 36px;
+            height: 36px;
+
+            fill: #044C7A;
+        }
+
+        &:hover {
+            opacity: .85;
+            box-shadow: 0 0 4px 1.5px rgba($colorLightBlue, .5);
+        }
+    }
+
+    &__form {
+        position: relative;
+
+        margin: auto;
+    }
+
+    &__call {
+        width: 938px;
+        height: 618px;
+        padding: 89px 242px 79px;
+
+        background: url('./../../assets/images/form_call_bg.png') center center no-repeat;
+        background-size: cover;
+
+        @include mq(1439) {
+            width: 711px;
+            height: 578px;
+            padding: 62px 132px 30px;
+        }
+
+        @include mq(1023) {
+            width: 635px;
+            height: 527px;
+            padding: 50px 78px 30px;
+        }
+
+        @include mq(767) {
+            width: 90vw;
+            height: auto;
+            padding: 40px 30px 30px;
+        }
+
+        @include mq(449) {
+            width: 100vw;
+            padding: 50px 20px 30px;
+        }
+    }
+
+    &__head {
+        margin: 0 0 20px;
+
+        @include mq(767) {
+            margin: 0 0 10px;
+        }
+    }
+
+    &__title {
+        margin: 0 0 19px;
+
+        font-size: 40px;
+        color: $colorWhite;
+        text-align: center;
+
+        @include openSansCond(700);
+
+        @include mq(1023) {
+            font-size: 34px;
+        }
+
+        @include mq(767) {
+            font-size: 30px;
+        }
+    }
+
+    &__subtitle {
+        padding: 0 18px;
+
+        font-size: 16px;
+        line-height: 21px;
+        color: $colorWhite;
+        text-align: center;
+
+        @include montserrat(400);
+
+        @include mq(767) {
+            font-size: 15px;
+        }
+    }
+
+    &__form-input {
+
+        input {
+            width: 100%;
+            height: 63px;
+            padding: 24px 0;
+            margin: 0 0 30px;
+
+            border: none;
+            outline: none;
+            border-bottom: 2px solid $colorLightBlue;
+            background: none;
+
+            font-size: 17px;
+            color: $colorWhite;
+
+            @include montserrat(400);
+
+            @include mq(767) {
+                height: 50px;
+                margin: 0 0 15px;
+
+                font-size: 15px;
+            }
+
+            &::placeholder {
+                color: $colorWhite;
+            }
+        }
+    }
+
+    &__form-check {
+        display: flex;
+        padding: 5px 0 39px;
+    }
+
+    &__form-checkbox {
+        padding: 0 17px 0 50px;
+
+        @include mq(1023) {
+            padding: 0 14px 0 0;
+        }
+
+        input {
+            width: 34px;
+            height: 33px;
+
+            @include mq(1023) {
+                width: 20px;
+                height: 20px;
+                margin: 3px 0 0;
+            }
+        }
+    }
+
+    &__form-text {
+        padding: 0 25px 0 0;
+
+        font-size: 12px;
+        line-height: 14.62px;
+        color: $colorWhite;
+
+        @include montserrat(400);
+
+        @include mq(1023) {
+            padding: 0;
+        }
+    }
+
+    &__form-button {
+        text-align: center;
+    }
+
+    &__project {
+        width: 938px;
+        height: 827px;
+        padding: 69px 242px 64px;
+
+        background: url('./../../assets/images/form_project_bg.png') center center no-repeat;
+        background-size: cover;
+
+        @include mq(1439) {
+            width: 738px;
+            height: auto;
+            padding: 49px 132px 40px;
+        }
+
+        @include mq(1023) {
+            width: 638px;
+            padding: 49px 82px 40px;
+        }
+
+        @include mq(767) {
+            width: 90vw;
+            padding: 59px 30px 30px;
+        }
+
+        @include mq(449) {
+            width: 100vw;
+            padding: 50px 20px 30px;
+        }
+    }
+
+    &__project-form {
+        padding: 15px 0 0;
+
+        .popup__form-input input,
+        .popup__form-input textarea {
+            width: 100%;
+            height: 67px;
+            padding: 25px 25px 30px;
+            margin: 0 0 23px;
+
+            border: none;
+            outline: none;
+            background-color: $colorWhite;
+
+            font-size: 17px;
+            color: $colorBlack2;
+
+            @include montserrat(400);
+
+            @include mq(449) {
+                margin: 0 0 15px;
+            }
+
+            &::placeholder {
+                color: $colorBlack2;
+            }
+        }
+
+        .popup__form-input textarea {
+            height: 138px;
+            padding: 18px 25px;
+            resize: none;
+        }
+
+        .popup__form-check {
+            padding: 5px 0 32px;
+        }
+    }
+
+    &__form-file {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: -31px 0 24px;
+    }
+
+    &__form-file_text {
+        width: calc(100% - 160px);
+        padding: 15px 0 0;
+
+        font-size: 12px;
+        line-height: 14.62px;
+        color: $colorWhite;
+
+        @include montserrat(400);
+
+        @include mq(449) {
+            width: calc(100% - 120px);
+        }
+    }
+
+    &__form-file_button {
+        margin: 0;
+        padding: 0;
+
+        input[type='file'] {
+            width: 0;
+            height: 0;
+            overflow: hidden;
+        }
+
+        label {
+            position: relative;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 144px;
+            height: 63px;
+            margin: 0;
+            overflow: hidden;
+
+            background-color: $colorBlue2;
+            cursor: pointer;
+
+            @include mq(449) {
+                width: 109px;
+                height: 52px;
+            }
+
+            span {
+                font-size: 21px;
+                color: $colorWhite;
+
+                @include openSansCond(700);
+            }
+
+            .icon {
+                position: absolute;
+                top: -3px;
+                right: 13px;
+
+                opacity: .2;
+
+                @include mq(449) {
+                    top: -5px;
+                    right: -3px;
+                }
+            }
+        }
+    }
+}

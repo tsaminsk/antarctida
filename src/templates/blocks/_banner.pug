@@ -12,9 +12,57 @@ section.banner
                     a(href="tel:+73012501818").header__phone +7 (301) 250 18 18
                     .header__button
                         a(href="#projects").btn.btn-outer.btn-white.js-scroll-trigger НАШИ ПРОЕКТЫ
-                    .header__menu
+                    .header__menu.js-header-menu
                         .icon.icon-menu
                         |Меню
+                .header__dropdown.js-header-dropdown.is-open
+                    .header__dropdown-content
+                        .header__dropdown-group
+                            .header__dropdown-group_title Консалтинг
+                            ul.header__dropdown-list
+                                li.header__dropdown-link: a(href="#") Обследование зданий и сооружений
+                                li.header__dropdown-link: a(href="#") Технико-экономическое обоснование (ТЭО)
+                                li.header__dropdown-link: a(href="#") Градостроительный план земельного участка (ГПЗУ)
+                                li.header__dropdown-link: a(href="#") Технические условия на подключения
+                                li.header__dropdown-link: a(href="#") Инженерные изыскания
+                                li.header__dropdown-link: a(href="#") Техническое задание на проектирование
+                        .header__dropdown-group
+                            .header__dropdown-group_title ПРОЕКТИРОВАНИЕ
+                            ul.header__dropdown-list
+                                li.header__dropdown-link: a(href="#") План застройки
+                                li.header__dropdown-link: a(href="#") Эскизный проект
+                                li.header__dropdown-link: a(href="#") Проектная документация
+                                li.header__dropdown-link: a(href="#") Экспертиза
+                                li.header__dropdown-link: a(href="#") Разрешение на строительство
+                                li.header__dropdown-link: a(href="#") Рабочая документация
+                                li.header__dropdown-link: a(href="#") Повторное применение проектной документации
+                                li.header__dropdown-link: a(href="#") BIM-технологии
+                        .header__dropdown-group
+                            .header__dropdown-group_title КОНТАКТЫ
+                            ul.header__dropdown-list
+                                li.header__dropdown-link: a(href="#") О компании
+                                li.header__dropdown-link: a(href="#") Мы в социальных сетях
+                                li.header__dropdown-link: a(href="#") YouTube
+                                li.header__dropdown-link: a(href="#") Facebook
+                                li.header__dropdown-link: a(href="#") VK
+                                li.header__dropdown-link: a(href="#") Рекомендации
+                        .header__dropdown-group
+                            .header__dropdown-group_title СОПРОВОЖДЕНИЕ
+                            ul.header__dropdown-list
+                                li.header__dropdown-link: a(href="#") Авторский надзор
+                                li.header__dropdown-link: a(href="#") Строительный контроль
+                                li.header__dropdown-link: a(href="#") Государственный Архитектурно-строительный
+                                li.header__dropdown-link: a(href="#") надзор (ГАСН)
+                                li.header__dropdown-link: a(href="#") Ввод в эксплуатацию
+                        .header__dropdown-group
+                            .header__dropdown-group_title НАШИ ПРОЕКТЫ
+                            ul.header__dropdown-list
+                                li.header__dropdown-link: a(href="#") Объекты в России
+                                li.header__dropdown-link: a(href="#") Торговые центры
+                                li.header__dropdown-link: a(href="#") Жилые здания
+                                li.header__dropdown-link: a(href="#") Школы, сады, спорт
+                                li.header__dropdown-link: a(href="#") Гостиницы, офисы
+                                li.header__dropdown-link: a(href="#") Другие объекты
             .banner__content
                 .banner__title
                     h1 НУЖЕН ПРОЕКТ?
@@ -23,7 +71,7 @@ section.banner
                     span Узнайте как профессиональные возможности и опыт смогут помочь в этом
                 .banner__message
                     .banner__message-decor
-                    .banner__message-icon
+                    .banner__message-icon.js-popup-open--call
                         .icon.icon-message
 
     .banner__paralax.posa(data-type="background-paralax")

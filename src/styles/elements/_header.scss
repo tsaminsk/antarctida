@@ -1,4 +1,6 @@
 .header {
+    position: relative;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -112,6 +114,9 @@
     }
 
     &__menu {
+        position: relative;
+        z-index: 40;
+
         padding: 0 0 9px;
 
         cursor: pointer;
@@ -130,6 +135,80 @@
 
             @include mq(449) {
                 margin: -1px 5px 0 0;
+            }
+        }
+    }
+
+    &__dropdown {
+        position: absolute;
+        z-index: 20;
+        top: 29px;
+        right: -15px;
+
+        display: none;
+        width: 1170px;
+        // height: 588px;
+
+        background: url('./../../assets/images/header-dropdown_bg.png') top right no-repeat;
+
+        animation: show .3s;
+
+        &.is-open {
+            display: block;
+        }
+    }
+
+    &__dropdown-content {
+        padding: 106px 20px 25px 44px;
+    }
+
+    &__dropdown-group {
+        display: inline-block;
+        width: 379px;
+        margin: 0 37px 27px 0;
+
+        vertical-align: top;
+
+        &:nth-child(3) {
+            width: 284px;
+            margin: 0 0 20px -28px;
+        }
+    }
+
+    &__dropdown-group_title {
+        margin: 0 0 12px;
+
+        font-size: 24px;
+        line-height: 35px;
+        color: $colorWhite;
+
+        @include openSansCond(700);
+    }
+
+    &__dropdown-list {
+        padding: 0;
+
+        list-style: none;
+    }
+
+    &__dropdown-link {
+
+        a {
+            padding: 1px;
+
+            font-size: 12px;
+            line-height: 22px;
+            color: $colorWhite;
+            text-decoration: none;
+
+            transition: color .2s linear, background-color .2s linear;
+
+            @include montserrat(400);
+
+            &:hover {
+                background-color: #EAC176;
+
+                color: #022149;
             }
         }
     }

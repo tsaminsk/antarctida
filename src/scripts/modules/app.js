@@ -88,10 +88,10 @@ window.onload = function () {
     });
 
     // map in contacts
-    // initMap('map', coordinates, 18, [{ position: coordinates, name: 'Антарктида' }])
+    initMap('map', coordinates, 18, [{ position: coordinates, name: 'Антарктида' }])
 
     // map in "объекты компании"
-    // initMap('map2', coordinates2, 13, addresses)
+    initMap('map2', coordinates2, 13, addresses)
 
     function initMap(id, center, zoom, markers) {
 
@@ -296,6 +296,24 @@ window.onload = function () {
 
     $('.confidence__slider').sliderconfidence()
 
+    $('.js-popup-open--call').on('click', function () {
+        $('body').addClass('no-overflow')
+        $('.js-popup--call').addClass('is-open')
+    })
+
+    $('.js-popup-open--project').on('click', function () {
+        $('body').addClass('no-overflow')
+        $('.js-popup--project').addClass('is-open')
+    })
+
+    $('.js-popup-close').on('click', function () {
+        $('body').removeClass('no-overflow')
+        $('.js-popup').removeClass('is-open')
+    })
+
+    $('.js-header-menu').on('click', function () {
+        $('.js-header-dropdown').toggleClass('is-open')
+    })
 };
 
 (function ($) {

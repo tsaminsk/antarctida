@@ -1,0 +1,55 @@
+.popup.js-popup.js-popup--call
+    .popup__outer
+        .popup__form
+            .popup__close.js-popup-close
+                <svg viewBox="0 0 24 24">
+                    <path d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z" />
+                </svg>
+            .popup__call
+                .popup__head
+                    .popup__title ЗАКАЗАТЬ ЗВОНОК
+                    .popup__subtitle Появились какие-либо вопросы, напишите нам, и мы на них ответим
+                form.popup__call-form
+                    .popup__form-input
+                        input(type="text" name="name" id="popup-call-name" placeholder="Ваше имя")
+                    .popup__form-input
+                        input(type="tel" name="phone" id="popup-call-phone" placeholder="Телефон")
+                    .popup__form-check
+                        .popup__form-checkbox
+                            input(type="checkbox" id="popup-call-checkbox" name="popup-call-checkbox" data-form="checkbox")
+                            //- label(for="popup-call-checkbox")
+                        .popup__form-text Нажимая кнопку, вы соглашаетесь с политикой конфиденциальности и на обработку персональных данных
+                    .popup__form-button
+                        button.btn.btn-outer.btn-white.btn-big(type="submit") ОТПРАВИТЬ ЗАЯВКУ
+.popup.js-popup.js-popup--project
+    .popup__outer
+        .popup__form
+            .popup__close.js-popup-close
+                <svg viewBox="0 0 24 24">
+                    <path d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z" />
+                </svg>
+            .popup__project
+                .popup__head
+                    .popup__title ЗАКАЗАТЬ ПРОЕКТ
+                    .popup__subtitle Появились какие-либо вопросы, напишите нам, и мы на них ответим
+                form.popup__project-form
+                    .popup__form-input
+                        input(type="text" name="name" id="popup-project-name" placeholder="Ваше имя")
+                    .popup__form-input
+                        input(type="tel" name="phone" id="popup-project-phone" placeholder="Ваш телефон")
+                    .popup__form-input
+                        textarea(name="message" id="popup-project-phone" placeholder="Описание проекта")
+                    .popup__form-file
+                        .popup__form-file_text Вы можете добавить файл проекта (Jpeg, PDF) <br>Не более 10 файлов
+                        .popup__form-file_button
+                            input(type="file" id="popup-project-file" name="popup-project-file" multiple="true" accept="image/x-png,image/jpeg,application/pdf")
+                            label(for="popup-project-file")
+                                .icon.icon-litle-a
+                                span ОБЗОР
+                    .popup__form-check
+                        .popup__form-checkbox
+                            input(type="checkbox" id="popup-project-checkbox" name="popup-project-checkbox" data-form="checkbox")
+                            //- label(for="form-project-checkbox")
+                        .popup__form-text Нажимая кнопку, вы соглашаетесь с политикой конфиденциальности и на обработку персональных данных
+                    .popup__form-button
+                        button.btn.btn-outer.btn-white.btn-big(type="submit") ОТПРАВИТЬ ЗАЯВКУ

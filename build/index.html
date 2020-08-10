@@ -27,8 +27,68 @@
                     </div>
                     <div class="header__main"><a class="header__phone" href="tel:+73012501818">+7 (301) 250 18 18</a>
                         <div class="header__button"><a class="btn btn-outer btn-white js-scroll-trigger" href="#projects">НАШИ ПРОЕКТЫ</a></div>
-                        <div class="header__menu">
+                        <div class="header__menu js-header-menu">
                             <div class="icon icon-menu"></div>Меню
+                        </div>
+                    </div>
+                    <div class="header__dropdown js-header-dropdown is-open">
+                        <div class="header__dropdown-content">
+                            <div class="header__dropdown-group">
+                                <div class="header__dropdown-group_title">Консалтинг</div>
+                                <ul class="header__dropdown-list">
+                                    <li class="header__dropdown-link"><a href="#">Обследование зданий и сооружений</a></li>
+                                    <li class="header__dropdown-link"><a href="#">Технико-экономическое обоснование (ТЭО)</a></li>
+                                    <li class="header__dropdown-link"><a href="#">Градостроительный план земельного участка (ГПЗУ)</a></li>
+                                    <li class="header__dropdown-link"><a href="#">Технические условия на подключения</a></li>
+                                    <li class="header__dropdown-link"><a href="#">Инженерные изыскания</a></li>
+                                    <li class="header__dropdown-link"><a href="#">Техническое задание на проектирование</a></li>
+                                </ul>
+                            </div>
+                            <div class="header__dropdown-group">
+                                <div class="header__dropdown-group_title">ПРОЕКТИРОВАНИЕ</div>
+                                <ul class="header__dropdown-list">
+                                    <li class="header__dropdown-link"><a href="#">План застройки</a></li>
+                                    <li class="header__dropdown-link"><a href="#">Эскизный проект</a></li>
+                                    <li class="header__dropdown-link"><a href="#">Проектная документация</a></li>
+                                    <li class="header__dropdown-link"><a href="#">Экспертиза</a></li>
+                                    <li class="header__dropdown-link"><a href="#">Разрешение на строительство</a></li>
+                                    <li class="header__dropdown-link"><a href="#">Рабочая документация</a></li>
+                                    <li class="header__dropdown-link"><a href="#">Повторное применение проектной документации</a></li>
+                                    <li class="header__dropdown-link"><a href="#">BIM-технологии</a></li>
+                                </ul>
+                            </div>
+                            <div class="header__dropdown-group">
+                                <div class="header__dropdown-group_title">КОНТАКТЫ</div>
+                                <ul class="header__dropdown-list">
+                                    <li class="header__dropdown-link"><a href="#">О компании</a></li>
+                                    <li class="header__dropdown-link"><a href="#">Мы в социальных сетях</a></li>
+                                    <li class="header__dropdown-link"><a href="#">YouTube</a></li>
+                                    <li class="header__dropdown-link"><a href="#">Facebook</a></li>
+                                    <li class="header__dropdown-link"><a href="#">VK</a></li>
+                                    <li class="header__dropdown-link"><a href="#">Рекомендации</a></li>
+                                </ul>
+                            </div>
+                            <div class="header__dropdown-group">
+                                <div class="header__dropdown-group_title">СОПРОВОЖДЕНИЕ</div>
+                                <ul class="header__dropdown-list">
+                                    <li class="header__dropdown-link"><a href="#">Авторский надзор</a></li>
+                                    <li class="header__dropdown-link"><a href="#">Строительный контроль</a></li>
+                                    <li class="header__dropdown-link"><a href="#">Государственный Архитектурно-строительный</a></li>
+                                    <li class="header__dropdown-link"><a href="#">надзор (ГАСН)</a></li>
+                                    <li class="header__dropdown-link"><a href="#">Ввод в эксплуатацию</a></li>
+                                </ul>
+                            </div>
+                            <div class="header__dropdown-group">
+                                <div class="header__dropdown-group_title">НАШИ ПРОЕКТЫ</div>
+                                <ul class="header__dropdown-list">
+                                    <li class="header__dropdown-link"><a href="#">Объекты в России</a></li>
+                                    <li class="header__dropdown-link"><a href="#">Торговые центры</a></li>
+                                    <li class="header__dropdown-link"><a href="#">Жилые здания</a></li>
+                                    <li class="header__dropdown-link"><a href="#">Школы, сады, спорт</a></li>
+                                    <li class="header__dropdown-link"><a href="#">Гостиницы, офисы</a></li>
+                                    <li class="header__dropdown-link"><a href="#">Другие объекты</a></li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </header>
@@ -41,7 +101,7 @@
                     </div>
                     <div class="banner__message">
                         <div class="banner__message-decor"></div>
-                        <div class="banner__message-icon">
+                        <div class="banner__message-icon js-popup-open--call">
                             <div class="icon icon-message"></div>
                         </div>
                     </div>
@@ -199,7 +259,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="projects__content-button"><a class="btn btn-outer btn-black btn-big" href="javascript:void(0);">СМОТРЕТЬ ВСЕ ПРОЕКТЫ</a></div>
+                <div class="projects__content-button"><a class="btn btn-outer btn-black btn-big js-popup-open--project" href="javascript:void(0);">СМОТРЕТЬ ВСЕ ПРОЕКТЫ</a></div>
             </div>
             <div class="eis__icon eis__icon-4">
                 <div class="icon icon-eis-4"></div>
@@ -780,6 +840,61 @@
                 </div>
             </footer>
     </section>
+    <div class="popup js-popup js-popup--call">
+        <div class="popup__outer">
+            <div class="popup__form">
+                <div class="popup__close js-popup-close"><svg viewBox="0 0 24 24">
+                        <path d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z" />
+                    </svg></div>
+                <div class="popup__call">
+                    <div class="popup__head">
+                        <div class="popup__title">ЗАКАЗАТЬ ЗВОНОК</div>
+                        <div class="popup__subtitle">Появились какие-либо вопросы, напишите нам, и мы на них ответим</div>
+                    </div>
+                    <form class="popup__call-form">
+                        <div class="popup__form-input"><input type="text" name="name" id="popup-call-name" placeholder="Ваше имя"></div>
+                        <div class="popup__form-input"><input type="tel" name="phone" id="popup-call-phone" placeholder="Телефон"></div>
+                        <div class="popup__form-check">
+                            <div class="popup__form-checkbox"><input type="checkbox" id="popup-call-checkbox" name="popup-call-checkbox" data-form="checkbox"></div>
+                            <div class="popup__form-text">Нажимая кнопку, вы соглашаетесь с политикой конфиденциальности и на обработку персональных данных</div>
+                        </div>
+                        <div class="popup__form-button"><button class="btn btn-outer btn-white btn-big" type="submit">ОТПРАВИТЬ ЗАЯВКУ</button></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="popup js-popup js-popup--project">
+        <div class="popup__outer">
+            <div class="popup__form">
+                <div class="popup__close js-popup-close"><svg viewBox="0 0 24 24">
+                        <path d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z" />
+                    </svg></div>
+                <div class="popup__project">
+                    <div class="popup__head">
+                        <div class="popup__title">ЗАКАЗАТЬ ПРОЕКТ</div>
+                        <div class="popup__subtitle">Появились какие-либо вопросы, напишите нам, и мы на них ответим</div>
+                    </div>
+                    <form class="popup__project-form">
+                        <div class="popup__form-input"><input type="text" name="name" id="popup-project-name" placeholder="Ваше имя"></div>
+                        <div class="popup__form-input"><input type="tel" name="phone" id="popup-project-phone" placeholder="Ваш телефон"></div>
+                        <div class="popup__form-input"><textarea name="message" id="popup-project-phone" placeholder="Описание проекта"></textarea></div>
+                        <div class="popup__form-file">
+                            <div class="popup__form-file_text">Вы можете добавить файл проекта (Jpeg, PDF) <br>Не более 10 файлов</div>
+                                <div class="popup__form-file_button"><input type="file" id="popup-project-file" name="popup-project-file" multiple="true" accept="image/x-png,image/jpeg,application/pdf"><label for="popup-project-file">
+                                        <div class="icon icon-litle-a"></div><span>ОБЗОР</span>
+                                    </label></div>
+                            </div>
+                            <div class="popup__form-check">
+                                <div class="popup__form-checkbox"><input type="checkbox" id="popup-project-checkbox" name="popup-project-checkbox" data-form="checkbox"></div>
+                                <div class="popup__form-text">Нажимая кнопку, вы соглашаетесь с политикой конфиденциальности и на обработку персональных данных</div>
+                            </div>
+                            <div class="popup__form-button"><button class="btn btn-outer btn-white btn-big" type="submit">ОТПРАВИТЬ ЗАЯВКУ</button></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBp625t4RGV1qlsbMk6nCqS3wXU_tiDpYA"></script>
     <script src="./assets/scripts/libs.min.js"></script>
     <script src="./assets/scripts/script.min.js"></script>
