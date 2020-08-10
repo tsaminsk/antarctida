@@ -18,6 +18,14 @@
             text-align: center;
 
             @include openSansCond(700);
+
+            @include mq(1023) {
+                font-size: 34px;
+            }
+
+            @include mq(767) {
+                font-size: 30px;
+            }
         }
     }
 
@@ -25,10 +33,24 @@
         position: relative;
 
         margin: 0 -10px;
+
+        @include mq(767) {
+            margin: 0;
+        }
     }
 
-    &__slider-inner {
-        // display: flex;
+    &__slider-outer {
+        @include mq(1023) {
+            padding: 0 40px;
+        }
+
+        @include mq(767) {
+            padding: 0 60px;
+        }
+
+        @include mq(449) {
+            padding: 0;
+        }
     }
 
     &__card {
@@ -68,10 +90,26 @@
 
         &--left {
             left: -8px;
+
+            @include mq(767) {
+                left: 20px;
+            }
+
+            @include mq(449) {
+                left: -8px;
+            }
         }
 
         &--right {
             right: -8px;
+
+            @include mq(767) {
+                right: 20px;
+            }
+
+            @include mq(449) {
+                right: -8px;
+            }
         }
     }
 
@@ -80,5 +118,15 @@
         right: 21.9%;
 
         transform: scale(.67);
+
+        @include mq(1439) {
+            bottom: 12%;
+            right: 7.9%;
+        }
+
+        @include mq(767) {
+            bottom: 18%;
+            right: 0;
+        }
     }
 }

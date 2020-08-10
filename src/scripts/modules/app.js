@@ -88,10 +88,10 @@ window.onload = function () {
     });
 
     // map in contacts
-    initMap('map', coordinates, 18, [{ position: coordinates, name: 'Антарктида' }])
+    // initMap('map', coordinates, 18, [{ position: coordinates, name: 'Антарктида' }])
 
     // map in "объекты компании"
-    initMap('map2', coordinates2, 13, addresses)
+    // initMap('map2', coordinates2, 13, addresses)
 
     function initMap(id, center, zoom, markers) {
 
@@ -141,10 +141,32 @@ window.onload = function () {
     $('.js-slider-projects-1').slick({
         infinite: true,
         slidesToShow: 3,
-        slidesToScroll: 1,
+        slidesToScroll: 3,
         arrows: true,
         prevArrow: $('.projects__content-arrow--left'),
-        nextArrow: false
+        nextArrow: false,
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    arrows: false,
+                }
+            },
+            {
+                breakpoint: 850,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2
+                }
+            },
+            {
+                breakpoint: 660,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }
+        ]
     });
 
     $('.js-slider-projects-2').slick({
@@ -154,6 +176,28 @@ window.onload = function () {
         arrows: true,
         prevArrow: false,
         nextArrow: $('.projects__content-arrow--right'),
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    arrows: false,
+                }
+            },
+            {
+                breakpoint: 850,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2
+                }
+            },
+            {
+                breakpoint: 660,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }
+        ]
     });
 
     $('.js-slider-confidence').slick({
@@ -164,7 +208,33 @@ window.onload = function () {
         swipeToSlide: true,
         arrows: true,
         prevArrow: $('.confidence__slider-arrow--left'),
-        nextArrow: $('.confidence__slider-arrow--right')
+        nextArrow: $('.confidence__slider-arrow--right'),
+        responsive: [
+            {
+                breakpoint: 1023,
+                settings: {
+                    draggable: true,
+                    slidesToScroll: 5,
+                    arrows: false
+                }
+            },
+            {
+                breakpoint: 767,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 3,
+                    arrows: false
+                }
+            },
+            {
+                breakpoint: 449,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                    arrows: false
+                }
+            }
+        ]
     });
 
     $('.js-slider-reviews').slick({
@@ -173,7 +243,30 @@ window.onload = function () {
         slidesToScroll: 4,
         arrows: true,
         prevArrow: $('.reviews__slider-arrow--left'),
-        nextArrow: $('.reviews__slider-arrow--right')
+        nextArrow: $('.reviews__slider-arrow--right'),
+        responsive: [
+            {
+                breakpoint: 1439,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 3
+                }
+            },
+            {
+                breakpoint: 1023,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2
+                }
+            },
+            {
+                breakpoint: 767,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }
+        ]
     });
 
     $('.js-slider-publication').slick({
@@ -182,7 +275,23 @@ window.onload = function () {
         slidesToScroll: 3,
         arrows: true,
         prevArrow: $('.publication__slider-arrow--left'),
-        nextArrow: $('.publication__slider-arrow--right')
+        nextArrow: $('.publication__slider-arrow--right'),
+        responsive: [
+            {
+                breakpoint: 1023,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2
+                }
+            },
+            {
+                breakpoint: 767,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }
+        ]
     });
 
     $('.confidence__slider').sliderconfidence()

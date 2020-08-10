@@ -149,3 +149,7 @@
 .icon-litle-a {
     @include sprite($litle-a);
 }
+
+.icon-bg-banner {
+    @include sprite($bg-banner);
+}

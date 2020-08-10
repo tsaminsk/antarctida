@@ -19,8 +19,24 @@ h2 {
 }
 
 .container {
-    width: rem($desktops);
+    width: rem(1140px);
     margin: 0 auto;
+
+    @include mq(1439) {
+        width: rem(900px);
+    }
+
+    @include mq(1023) {
+        width: rem(700px);
+    }
+
+    @include mq(767) {
+        width: rem(420px);
+    }
+
+    @include mq(449) {
+        width: rem(300px);
+    }
 }
 
 .posa {

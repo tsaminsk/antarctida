@@ -3,6 +3,14 @@
 
     background-image: linear-gradient(to bottom, $colorBlue, $colorBlue 63.4%, $colorBlue2 63.4%, $colorBlue2);
 
+    @include mq(767) {
+        background-image: linear-gradient(to bottom, $colorBlue, $colorBlue 56%, $colorBlue2 56%, $colorBlue2);
+    }
+
+    @include mq(449) {
+        background-image: linear-gradient(to bottom, $colorBlue, $colorBlue 62%, $colorBlue2 62%, $colorBlue2);
+    }
+
     &__bg {
         background: url('../../assets/images/steps_bg.png') center center no-repeat;
         background-size: cover;
@@ -12,6 +20,14 @@
         position: relative;
 
         padding: 102px 50px 0 0;
+
+        @include mq(1439) {
+            padding: 56px 0 0;
+        }
+
+        @include mq(767) {
+            padding: 26px 0 15px;
+        }
     }
 
     &__title {
@@ -19,12 +35,20 @@
 
         text-align: center;
 
+        @include mq(767) {
+            padding: 0;
+        }
+
         h2 {
             font-size: 40px;
             color: $colorWhite;
             font-weight: 400;
 
             @include openSansCond(700);
+
+            @include mq(1023) {
+                font-size: 34px;
+            }
         }
     }
 
@@ -33,6 +57,14 @@
         flex-wrap: wrap;
         padding: 60px 48px 40px 63px;
         counter-reset: num;
+
+        @include mq(1439) {
+            padding: 50px 0 40px;
+        }
+
+        @include mq(1023) {
+            padding: 40px 0 20px;
+        }
     }
 
     &__item {
@@ -40,15 +72,59 @@
         margin: 0 0 88px;
         counter-increment: num;
 
+        @include mq(1439) {
+            margin: 0 0 55px;
+        }
+
+        @include mq(767) {
+            width: 50%;
+            margin: 0 0 25px;
+        }
+
+        @include mq(449) {
+            width: 100%;
+            margin: 0 0 15px;
+        }
+
         &:first-child,
         &:last-child {
             width: 100%;
             margin: 0 0 69px;
+
+            @include mq(1439) {
+                margin: 0 0 55px;
+            }
+
+            @include mq(767) {
+                margin: 0 0 30px;
+            }
+        }
+
+        &:last-child {
+            @include mq(767) {
+                width: 50%;
+            }
+
+            @include mq(449) {
+                width: 100%;
+            }
         }
 
         &:nth-child(10) .steps__item-text::after,
         &:nth-child(11) .steps__item-text::after {
             right: -98px;
+
+            @include mq(1023) {
+                right: -70px;
+            }
+
+            @include mq(767) {
+                right: -55px;
+            }
+
+            @include mq(449) {
+                width: -100px;
+            }
         }
     }
 
@@ -58,11 +134,32 @@
         align-items: center;
         width: 240px;
         margin: 0 auto;
+
+        @include mq(767) {
+            width: 210px;
+        }
     }
 
     &__item-icon {
         width: 74px;
         margin: 0 22px 0 0;
+
+        @include mq(1023) {
+            margin: 0 -6px 0 0;
+
+            .icon {
+                transform: scale(.75);
+                transform-origin: 50% 50%;
+            }
+        }
+
+        @include mq(767) {
+            margin: 0 -12px 0 0;
+
+            .icon {
+                transform: scale(.6);
+            }
+        }
     }
 
     &__item-text {
@@ -74,6 +171,14 @@
         text-align: left;
 
         @include montserrat(400);
+
+        @include mq(1023) {
+            font-size: 15px;
+        }
+
+        @include mq(767) {
+            font-size: 13px;
+        }
 
         > p:first-child {
             position: relative;
@@ -92,6 +197,10 @@
                 border-radius: 50%;
                 background-color: $colorWhite;
                 box-shadow: 0 0 14px 2px rgba($colorWhite, .8);
+
+                @include mq(1023) {
+                    right: -15px;
+                }
             }
         }
 
@@ -108,17 +217,57 @@
             color: $colorLightBlue2;
 
             @include openSansCond(700);
+
+            @include mq(1023) {
+                right: -40px;
+
+                font-size: 70px;
+            }
+
+            @include mq(767) {
+                right: -30px;
+
+                font-size: 55px;
+            }
+
+            @include mq(449) {
+                top: 10px;
+                right: -60px;
+            }
         }
     }
 
     &__content-simbol {
         position: absolute;
         bottom: 6px;
-        left: 233px;
+        left: 50%;
+
+        transform: translate3d(-702px, 0, 0);
+
+        @include mq(1439) {
+            bottom: -47px;
+
+            transform: translate3d(-610px, 0, 0) scale(.75);
+            transform-origin: 50% 50%;
+        }
+
+        @include mq(1023) {
+            bottom: -97px;
+
+            transform: translate3d(-436px, 0, 0) scale(.5);
+        }
+
+        @include mq(767) {
+            display: none;
+        }
     }
 
     &__questions {
         padding: 64px 0 98px;
+
+        @include mq(1439) {
+            padding: 13px 0 56px;
+        }
 
         .steps__title {
             margin: 0 40px 31px 0;
@@ -139,18 +288,27 @@
         width: 809px;
         padding: 30px 3px 0 4px;
         margin: 0 auto;
+
+        @include mq(1023) {
+            width: 100%;
+        }
+
+        @include mq(767) {
+            padding: 0;
+        }
     }
 
     &__form-row {
         display: flex;
         justify-content: space-between;
-        margin: 0 0 17px;
+        flex-wrap: wrap;
 
         input,
         textarea {
             width: 380px;
             height: 67px;
             padding: 25px 25px 30px;
+            margin: 0 0 17px;
 
             border: none;
             outline: none;
@@ -159,6 +317,14 @@
             color: $colorBlack2;
 
             @include montserrat(400);
+
+            @include mq(1023) {
+                width: 335px;
+            }
+
+            @include mq(767) {
+                width: 100%;
+            }
         }
 
         textarea {
@@ -172,7 +338,12 @@
     &__form-footer {
         display: flex;
         justify-content: space-between;
+        align-items: flex-start;
         padding: 6px 154px 2px 26px;
+
+        @include mq(767) {
+            padding: 6px 0 2px 10px;
+        }
     }
 
     &__form-notes {
@@ -183,6 +354,10 @@
         color: $colorBlack2;
 
         @include montserrat(400);
+
+        @include mq(767) {
+            width: 221px;
+        }
     }
 
     .eis__icon-1 {
@@ -190,10 +365,42 @@
         left: 31.2%;
 
         transform: scale(.85);
+
+        @include mq(1439) {
+            left: auto;
+
+            right: 100px;
+        }
+
+        @include mq(1023) {
+            right: 40px;
+
+            transform: scale(.75);
+        }
+
+        @include mq(767) {
+            top: 49%;
+            right: 0;
+
+            transform: scale(.5);
+        }
+
+        @include mq(449) {
+            top: 57%;
+        }
     }
 
     .eis__icon-8 {
         bottom: -56px;
         right: 16.7%;
+
+        @include mq(1439) {
+            right: auto;
+            left: 30px;
+        }
+
+        @include mq(1023) {
+            transform: scale(.75);
+        }
     }
 }

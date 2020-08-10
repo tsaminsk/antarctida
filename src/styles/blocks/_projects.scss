@@ -8,6 +8,14 @@
         position: relative;
 
         padding: 73px 30% 71px 0;
+
+        @include mq(1439) {
+            padding: 45px 30% 37px 0;
+        }
+
+        @include mq(1023) {
+            padding: 40px 0 30px;
+        }
     }
 
     &__head-arrow {
@@ -21,12 +29,32 @@
     &__title {
         margin: 0 0 50px;
 
+        @include mq(1439) {
+            margin: 0 0 22px;
+        }
+
+        @include mq(1023) {
+            margin: 0 0 10px;
+        }
+
         h2 {
             font-size: 40px;
             line-height: 55px;
             color: $colorBlue;
 
             @include openSansCond(700);
+
+            @include mq(1023) {
+                font-size: 34px;
+
+                br {
+                    display: none;
+                }
+            }
+
+            @include mq(767) {
+                line-height: 40px;
+            }
         }
     }
 
@@ -36,12 +64,41 @@
         color: $colorGray;
 
         @include montserrat(400);
+
+        @include mq(1023) {
+            font-size: 15px;
+            line-height: 21px;
+        }
+
+        @include mq(767) {
+            font-size: 14px;
+            letter-spacing: -.2px;
+            line-height: 18px;
+        }
     }
 
     &__image {
         position: absolute;
         top: -89px;
         right: -79px;
+
+        @include mq(1439) {
+            top: -117px;
+
+            transform: scale(.75);
+            transform-origin: 50% 50%;
+        }
+
+        @include mq(1023) {
+            top: -146px;
+            right: -121px;
+
+            transform: scale(.55);
+        }
+
+        @include mq(767) {
+            display: none;
+        }
     }
 
     &__content {
@@ -49,37 +106,74 @@
     }
 
     &__content-row {
+        width: auto;
         margin: 0 0 55px;
-        // overflow: hidden;
 
         &:nth-child(2n + 1) {
             padding: 0 0 0 calc(50% - 570px);
 
-            .projects__cart {
-                margin: 0 100px 0 0;
+            @include mq(1439) {
+                padding: 0 0 0 calc(50% - 450px);
+            }
+
+            @include mq(1023) {
+                padding: 0;
             }
         }
 
         &:nth-child(2n) {
             padding: 0 calc(50% - 570px) 0 0;
 
-            .projects__content-inner {
-                flex-direction: row-reverse;
+            @include mq(1439) {
+                padding: 0 calc(50% - 450px) 0 0;
             }
 
-            .projects__cart {
-                margin: 0 0 0 100px;
+            @include mq(1023) {
+                padding: 0;
             }
         }
     }
 
     &__content-outer {
         position: relative;
+
+        margin: 0 -40px;
+
+        @include mq(1439) {
+            margin: 0 -30px;
+        }
+
+        @include mq(849) {
+            margin: 0;
+        }
     }
 
-    &__content-inner {
-        display: flex;
-        flex-wrap: nowrap;
+    &__cart {
+        display: inline-block;
+        width: 538px;
+        padding: 0 40px;
+        overflow: hidden;
+
+        @include mq(1439) {
+            width: 364px;
+            padding: 0 30px;
+        }
+
+        @include mq(849) {
+            padding: 0 0 0 30px;
+        }
+
+        @include mq(659) {
+            padding: 0 0 0 10vw;
+        }
+    }
+
+    &__cart-inner {
+        width: 458px;
+
+        @include mq(1439) {
+            width: 304px;
+        }
     }
 
     &__cart-image {
@@ -88,6 +182,16 @@
         width: 458px;
         height: 260px;
         overflow: hidden;
+
+        @include mq(1439) {
+            width: 304px;
+            height: 172px;
+        }
+
+        @include mq(659) {
+            width: 80vw;
+            height: 45vw;
+        }
 
         &::after {
             content: '';
@@ -99,12 +203,18 @@
             height: 100%;
 
             background-image: linear-gradient(to top, rgba($colorBlue, .85), rgba($colorBlue, .5) 70px, rgba($colorBlue, 0) 90px, rgba($colorBlue, 0));
+
+            @include mq(1023) {
+                background-image: linear-gradient(to top, rgba($colorBlue, .85), rgba($colorBlue, .5) 30px, rgba($colorBlue, 0) 55px, rgba($colorBlue, 0));
+            }
         }
 
         img {
             position: absolute;
             top: 50%;
             left: 50%;
+
+            width: 100%;
 
             transform: translate3d(-50%, -50%, 0);
         }
@@ -123,6 +233,18 @@
 
         @include montserrat(400);
 
+        @include mq(1439) {
+            padding: 0 15px 20px;
+
+            font-size: 14px;
+        }
+
+        @include mq(1023) {
+            padding: 0 10px 15px;
+
+            font-size: 13px;
+        }
+
         &::after {
             content: '';
             position: absolute;
@@ -133,6 +255,16 @@
             height: 2px;
 
             background-color: $colorWhite;
+
+            @include mq(1439) {
+                top: 7px;
+
+                width: 28px;
+            }
+
+            @include mq(1023) {
+                display: none;
+            }
         }
     }
 
@@ -146,6 +278,18 @@
 
         @include openSansCond(700);
 
+        @include mq(1439) {
+            padding: 20px 0 0 62px;
+
+            font-size: 19px;
+        }
+
+        @include mq(1023) {
+            padding: 15px 10px 0;
+
+            font-size: 17px;
+        }
+
         &::before {
             content: '';
             position: absolute;
@@ -156,6 +300,16 @@
             height: 2px;
 
             background-color: $colorLightBlue;
+
+            @include mq(1439) {
+                top: 29px;
+
+                width: 34px;
+            }
+
+            @include mq(1023) {
+                display: none;
+            }
         }
     }
 
@@ -163,12 +317,28 @@
         position: absolute;
         top: 115px;
 
+        @include mq(1439) {
+            top: 71px;
+        }
+
+        @include mq(1023) {
+            display: none !important;
+        }
+
         &--left {
-            left: -77px;
+            left: -37px;
+
+            @include mq(1439) {
+                left: -17px;
+            }
         }
 
         &--right {
-            right: -77px;
+            right: -37px;
+
+            @include mq(1439) {
+                right: -17px;
+            }
         }
     }
 
@@ -176,15 +346,45 @@
         padding: 9px 0 43px 75px;
 
         text-align: center;
+
+        @include mq(1439) {
+            padding: 9px 0 23px;
+        }
     }
 
     .eis__icon-4 {
         bottom: 70px;
         left: 18.6%;
+
+        @include mq(1439) {
+            bottom: 10px;
+            left: 11.6%;
+        }
+
+        @include mq(1023) {
+            left: 70%;
+
+            transform: scale(.75);
+            transform-origin: 100% 50%;
+        }
+
+        @include mq(449) {
+            bottom: 50px;
+            left: auto;
+            right: 0;
+        }
     }
 
     .eis__icon-5 {
         bottom: -46px;
         right: 21.2%;
+
+        @include mq(1439) {
+            right: 125px;
+        }
+
+        @include mq(1023) {
+            display: none;
+        }
     }
 }

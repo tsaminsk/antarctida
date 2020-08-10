@@ -11,6 +11,14 @@
 
         background: url('../../assets/images/vybor_bg.png') center center no-repeat;
         background-size: cover;
+
+        @include mq(1439) {
+            padding: 146px 0 0;
+        }
+
+        @include mq(1023) {
+            padding: 80px 0 0;
+        }
     }
 
     &__head {
@@ -21,6 +29,19 @@
         position: absolute;
         top: -288px;
         right: -150px;
+
+        @include mq(1439) {
+            // right: 20px;
+
+            .icon {
+                transform: scale(.75);
+                transform-origin: 100% 100%;
+            }
+        }
+
+        @include mq(767) {
+            display: none;
+        }
     }
 
     &__title {
@@ -32,6 +53,14 @@
             text-align: center;
 
             @include openSansCond(700);
+
+            @include mq(1023) {
+                font-size: 34px;
+            }
+
+            @include mq(767) {
+                font-size: 30px;
+            }
         }
     }
 
@@ -67,16 +96,37 @@
     &__content {
         display: flex;
         justify-content: space-between;
+        flex-wrap: wrap;
         padding: 58px 0 50px 20px;
+
+        @include mq(1023) {
+            padding: 38px 0 30px 10px;
+        }
+
+        @include mq(767) {
+            padding: 30px 0 30px 30px;
+        }
     }
 
     &__col {
         width: 33.33%;
+
+        @include mq(767) {
+            width: 100%;
+        }
     }
 
     &__article {
         padding: 0 40px 0 0;
         margin: 0 0 68px;
+
+        @include mq(1023) {
+            margin: 0 0 30px;
+        }
+
+        @include mq(767) {
+            padding: 0 10px 0 0;
+        }
     }
 
     &__article-title {
@@ -90,6 +140,20 @@
 
         @include montserrat(700);
 
+        @include mq(1023) {
+            margin: 0 0 13px;
+
+            font-size: 16px;
+            line-height: 23px;
+        }
+
+        @include mq(767) {
+            margin: 0 0 3px;
+
+            font-size: 15px;
+            line-height: 23px;
+        }
+
         &::before {
             content: '';
             position: absolute;
@@ -102,6 +166,10 @@
             border-radius: 50%;
             background-color: $colorWhite;
             box-shadow: 0 0 19px 5px rgba($colorWhite, .6);
+
+            @include mq(1023) {
+                left: -20px;
+            }
         }
     }
 
@@ -111,15 +179,58 @@
         color: $colorWhite;
 
         @include montserrat(400);
+
+        @include mq(1439) {
+            font-size: 18px;
+        }
+
+        @include mq(1023) {
+            font-size: 16px;
+            line-height: 23px;
+        }
+
+        @include mq(767) {
+            margin: 0 0 3px;
+
+            font-size: 15px;
+            line-height: 22px;
+        }
     }
 
     .eis__icon-2 {
         top: 4.5%;
         left: 23.4%;
+
+        @include mq(1439) {
+            top: 8.5%;
+            left: 3.4%;
+        }
+
+        @include mq(1023) {
+            top: 3.5%;
+        }
+
+        @include mq(767) {
+            display: none;
+        }
     }
 
     .eis__icon-9 {
         top: 30.2%;
         left: 7.8%;
+
+        @include mq(1439) {
+            top: 66%;
+            left: 1%;
+        }
+
+        @include mq(1023) {
+            left: auto;
+            right: 0;
+        }
+
+        @include mq(767) {
+            display: none;
+        }
     }
 }

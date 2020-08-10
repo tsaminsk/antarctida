@@ -5,16 +5,41 @@
 
     padding: 42px 0 30px;
 
+    @include mq(1439) {
+        padding: 20px 0 15px;
+    }
+
+    @include mq(1023) {
+        padding: 15px 0 7px;
+    }
+
+    @include mq(767) {
+        display: block;
+    }
+
     &__logotip {
         position: relative;
 
         padding: 0 0 0 42px;
+
+        @include mq(1023) {
+            padding: 0 0 0 30px;
+        }
+
+        @include mq(767) {
+            margin: 0 0 20px;
+        }
     }
 
     &__icon {
         width: 27px;
         padding: 5px 0 0;
         margin: -1px 0 0;
+
+        @include mq(1023) {
+            transform: scale(.75);
+            transform-origin: 50% 10%;
+        }
     }
 
     &__title {
@@ -23,6 +48,16 @@
         color: $colorLightBlue;
 
         @include openSansCond(700);
+
+        @include mq(1439) {
+            font-size: 29px;
+        }
+
+        @include mq(1023) {
+            margin: 0 0 2px;
+
+            font-size: 25px;
+        }
     }
 
     &__slogan {
@@ -32,6 +67,14 @@
         text-transform: uppercase;
 
         @include openSansCond(600);
+
+        @include mq(1439) {
+            font-size: 13px;
+        }
+
+        @include mq(1023) {
+            font-size: 11px;
+        }
     }
 
     &__main {
@@ -47,11 +90,25 @@
         text-decoration: none;
 
         @include openSansCond(700);
+
+        @include mq(1439) {
+            font-size: 24px;
+        }
+
+        @include mq(449) {
+            font-size: 15px;
+        }
     }
 
     &__button {
         padding: 0 0 8px;
         margin: 0 18px 0 24px;
+
+        @include mq(449) {
+            // padding: 0 0 4px;
+
+            margin: 0 8px 0 12px;
+        }
     }
 
     &__menu {
@@ -64,8 +121,16 @@
 
         @include montserrat(700);
 
+        @include mq(449) {
+            padding: 0 0 4px;
+        }
+
         .icon {
             margin: -1px 9px 0 0;
+
+            @include mq(449) {
+                margin: -1px 5px 0 0;
+            }
         }
     }
 }

@@ -7,12 +7,63 @@
     background: url('../../assets/images/services_bg.png') center center no-repeat;
     background-size: 100% 100%;
 
+    @include mq(1439) {
+        background-image: url('../../assets/images/services_bg_middle.png');
+        background-size: 100% 100%;
+    }
+
+    @include mq(1290) {
+        background-size: auto 100%;
+    }
+
+    @include mq(767) {
+        background: $colorLightBlue2;
+    }
+
     &__inner {
         padding: 108px 0 105px;
+
+        @include mq(1439) {
+            padding: 57px 0 47px;
+        }
+
+        @include mq(767) {
+            padding: 30px 0 20px;
+        }
     }
 
     &__title {
         display: none;
+
+        @include mq(1439) {
+            display: block;
+            float: left;
+        }
+
+        @include mq(767) {
+            float: none;
+            margin: 0 0 30px;
+
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 55px;
+            color: $colorWhite;
+            text-shadow: 0 0 2px $colorBlue;
+            text-transform: uppercase;
+
+            @include openSansCond(700);
+
+            @include mq(1023) {
+                font-size: 34px;
+            }
+
+            @include mq(767) {
+                color: $colorBlueDark;
+                text-shadow: none;
+            }
+        }
     }
 
     &__subtitle {
@@ -20,6 +71,19 @@
         margin: 0 0 103px;
 
         text-align: right;
+
+        @include mq(1439) {
+            padding: 0 24px 0 40%;
+        }
+
+        @include mq(1023) {
+            padding: 0 24px 0 29%;
+            margin: 0 0 20px;
+        }
+
+        @include mq(767) {
+            padding: 0;
+        }
 
         span {
             display: inline-block;
@@ -32,6 +96,16 @@
             text-align: left;
 
             @include montserrat(400);
+
+            @include mq(1023) {
+                padding: 0 0 0 180px;
+
+                font-size: 15px;
+            }
+
+            @include mq(767) {
+                padding: 0;
+            }
         }
     }
 
@@ -39,17 +113,47 @@
         display: flex;
         justify-content: space-between;
         padding: 0 0 0 101px;
+
+        @include mq(1439) {
+            padding: 0;
+        }
+
+        @include mq(767) {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
     }
 
     &__item {
         width: 300px;
 
+        @include mq(1023) {
+            width: 220px;
+        }
+
+        @include mq(767) {
+            width: 100%;
+        }
+
         &:first-child .services__item-icon .icon {
             transform: translate3d(-59px, 0, 0);
+
+            @include mq(1439) {
+                transform: translate3d(-39px, 0, 0);
+            }
+
+            @include mq(767) {
+                transform: translate3d(0, 0, 0);
+            }
         }
 
         &:nth-child(2) .services__item-list li::before {
             box-shadow: 0 0 12px 4px rgba($colorBlue, .6);
+
+            @include mq(767) {
+                // background-color: $colorBlueDark;
+                box-shadow: 0 0 12px 4px rgba($colorWhite, .6);
+            }
         }
     }
 
@@ -57,10 +161,17 @@
         margin: 0 auto 31px;
 
         text-align: center;
+
+        @include mq(1023) {
+            margin: 0 auto;
+
+            transform: scale(.75);
+            transform-origin: 50% 50%;
+        }
     }
 
     &__item-title {
-        padding: 0 0 50px 0;
+        padding: 0 0 50px;
 
         font-size: 37px;
         color: $colorWhite;
@@ -68,8 +179,24 @@
 
         @include openSansCond(700);
 
+        @include mq(1023) {
+            padding: 0 0 17px;
+
+            font-size: 28px;
+        }
+
+        @include mq(767) {
+            color: $colorBlue;
+            text-shadow: 0 0 3px $colorWhite;
+            text-align: center;
+        }
+
         &--dark {
             color: $colorBlue;
+
+            @include mq(1439) {
+                text-shadow: 0 0 3px $colorWhite;
+            }
         }
     }
 
@@ -77,6 +204,18 @@
         padding: 0 0 57px;
 
         list-style: none;
+
+        @include mq(1023) {
+            padding: 0 0 30px;
+        }
+
+        @include mq(767) {
+            padding: 0 0 20px;
+
+            br {
+                display: none;
+            }
+        }
 
         li {
             position: relative;
@@ -88,6 +227,17 @@
             color: $colorGrayLight;
 
             @include montserrat(700);
+
+            @include mq(1023) {
+                padding: 0 0 14px 16px;
+
+                font-size: 13px;
+                line-height: 17px;
+            }
+
+            @include mq(767) {
+                color: $colorBlueDark;
+            }
 
             &::before {
                 content: '';
@@ -101,11 +251,25 @@
                 border-radius: 50%;
                 background-color: $colorWhite;
                 box-shadow: 0 0 12px 4px rgba($colorWhite, .6);
+
+                @include mq(1023) {
+                    top: 7px;
+                    left: 0;
+                }
             }
         }
 
         &--dark li {
             color: $colorGray2;
+
+            @include mq(1439) {
+                text-shadow: 0 0 2px $colorWhite;
+            }
+
+            @include mq(767) {
+                color: $colorBlueDark;
+                text-shadow: none;
+            }
         }
     }
 
@@ -120,5 +284,17 @@
     .eis__icon-6 {
         bottom: 53px;
         right: 20%;
+
+        @include mq(1439) {
+            bottom: 6px;
+            right: 15%;
+        }
+
+        @include mq(449) {
+            right: 0;
+
+            transform: scale(.5);
+            transform-origin: 100% 100%;
+        }
     }
 }

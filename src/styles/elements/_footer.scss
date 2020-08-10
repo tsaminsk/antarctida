@@ -2,12 +2,38 @@
     background: url('../../assets/images/busch_bg_1.png') 14.5% 5px no-repeat, url('../../assets/images/busch_bg_2.png') 81.7% 21px no-repeat;
     background-color: rgba($colorBlueDark, .9);
 
+    @include mq(1599) {
+        background: url('../../assets/images/busch_bg_1.png') 0 23px no-repeat, url('../../assets/images/busch_bg_2.png') 99% 29px no-repeat;
+        background-color: rgba($colorBlueDark, .9);
+    }
+
+    @include mq(1439) {
+        background: url('../../assets/images/busch_bg_1.png') -7.5% 33px no-repeat, url('../../assets/images/busch_bg_2.png') 106.7% 39px no-repeat;
+        background-color: rgba($colorBlueDark, .9);
+    }
+
+    @include mq(1023) {
+        background: rgba($colorBlueDark, .9);
+    }
+
     &__border {
         width: 912px;
         height: 5px;
         margin: 0 auto;
 
         background-color: #BDE9F9;
+
+        @include mq(1023) {
+            width: 700px;
+        }
+
+        @include mq(767) {
+            width: 420px;
+        }
+
+        @include mq(449) {
+            width: 300px;
+        }
     }
 
     &__content {
@@ -16,6 +42,28 @@
         align-items: center;
         height: 115px;
         padding: 0 162px 15px 227px;
+
+        @include mq(1439) {
+            padding: 0 122px 15px 102px;
+        }
+
+        @include mq(1023) {
+            padding: 0 0 15px;
+        }
+
+        @include mq(767) {
+            flex-wrap: wrap;
+            height: auto;
+            padding: 20px 0 20px 100px;
+
+            > div {
+                width: 100%;
+            }
+        }
+
+        @include mq(449) {
+            padding: 15px 0;
+        }
     }
 
     &__politics {

@@ -7,6 +7,15 @@
     background: url('../../assets/images/banner_bg.png') center center no-repeat;
     background-size: cover;
 
+    @include mq(1023) {
+        padding: 47% 0 0;
+    }
+
+    @include mq(767) {
+        padding: 0;
+        height: 360px;
+    }
+
     &__overlay {
         background: url('../../assets/images/towers.png') center center no-repeat;
         background-size: cover;
@@ -21,27 +30,72 @@
         top: 65%;
 
         background: url('../../assets/images/busch_bg_1.png') 16% 46% no-repeat, url('../../assets/images/busch_bg_2.png') 7.1% 32% no-repeat, url('../../assets/images/busch_bg_1.png') 84% 35% no-repeat;
-        // background-size: 100% auto;
+
+        @include mq(1439) {
+            background: url('../../assets/images/busch_bg_1.png') -6% 89% no-repeat, url('../../assets/images/busch_bg_2.png') -7% 53% no-repeat, url('../../assets/images/busch_bg_1.png') 100% 76% no-repeat;
+        }
+
+        @include mq(1023) {
+            background: url('../../assets/images/busch_bg_2.png') -7% 53% no-repeat, url('../../assets/images/busch_bg_1.png') 100% 212% no-repeat;
+        }
+
+        @include mq(767) {
+            display: none;
+        }
     }
 
     &__content {
         display: flex;
         align-items: center;
         padding: 10px 0 0;
+
+        @include mq(1439) {
+            padding: 0;
+        }
+
+        @include mq(767) {
+            display: block;
+            margin: 40px 0 0;
+
+            text-align: center;
+        }
     }
 
     &__title {
         padding: 0 76px 0 0;
+
+        @include mq(1439) {
+            padding: 0 67px 0 0;
+        }
+
+        @include mq(1023) {
+            padding: 0 14px 20px 0;
+        }
 
         h1 {
             font-size: 72px;
             color: $colorWhite;
 
             @include openSansCond(700);
+
+            @include mq(1439) {
+                font-size: 56px;
+            }
+
+            @include mq(1023) {
+                font-size: 34px;
+            }
+
+            @include mq(767) {
+                color: $colorBlue;
+            }
         }
     }
 
     &__description {
+        position: relative;
+        z-index: 2;
+
         width: 365px;
         height: 70px;
         padding: 1px 0 2px 27px;
@@ -54,6 +108,52 @@
         color: $colorWhite;
 
         @include montserrat(700);
+
+        @include mq(1439) {
+            width: 318px;
+            height: 66px;
+            padding: 1px 0 2px 17px;
+            margin: 0 28px 0 0;
+
+            font-size: 15px;
+            line-height: 21px;
+        }
+
+        @include mq(767) {
+            width: 100%;
+            padding: 0;
+            margin: 0;
+
+            border-left: none;
+
+            color: $colorBlue;
+        }
+
+        span {
+            position: relative;
+            z-index: 2;
+        }
+
+        .icon {
+            position: absolute;
+            z-index: 0;
+            top: 0;
+            left: 0;
+
+            @include mq(1439) {
+                top: -6px;
+                left: -10px;
+
+                opacity: .8;
+
+                transform: scale(.7);
+                transform-origin: 0 0;
+            }
+
+            @include mq(767) {
+                display: none;
+            }
+        }
     }
 
     &__message {
@@ -69,6 +169,18 @@
         border-radius: 50%;
         border: 1px solid rgba($colorWhite, .5);
         transform: translate3d(0, 5px, 0);
+
+        @include mq(767) {
+            position: absolute;
+            top: -27px;
+            right: calc(50vw - 210px);
+
+            border: none;
+        }
+
+        @include mq(449) {
+            right: calc(50vw - 170px);
+        }
     }
 
     &__message-decor {
@@ -86,6 +198,10 @@
         animation-duration: 6s;
         animation-iteration-count: infinite;
         animation-timing-function: linear;
+
+        @include mq(767) {
+            display: none;
+        }
 
         &::after {
             content: '';

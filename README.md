@@ -1,6 +1,5 @@
 # Сайт antarctida
 
-для сборки на пк раскоментировать gulpfile стр 283
+npm run dev
 
-просто посмотреть тут: https://mandarin.netlify.app
-
+npm run spritePng

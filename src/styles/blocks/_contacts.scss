@@ -6,6 +6,12 @@
     background: url('../../assets/images/contacts_bg.jpg') center center no-repeat;
     background-size: cover;
 
+    @include mq(767) {
+        padding: 45px 0 0;
+
+        background: $colorBlue2;
+    }
+
     &__head {
         position: relative;
     }
@@ -24,6 +30,19 @@
         color: $colorBlack2;
 
         @include montserrat(700);
+
+        @include mq(1439) {
+            right: 0;
+        }
+
+        @include mq(1023) {
+            top: 64px;
+            right: -15px;
+        }
+
+        @include mq(767) {
+            display: none;
+        }
 
         &::before {
             content: '';
@@ -44,12 +63,25 @@
         padding: 0 6px 0 0;
         margin: 0 0 364px;
 
+        @include mq(767) {
+            padding: 0;
+            margin: 0 0 527px;
+        }
+
         h2 {
             font-size: 40px;
             color: $colorWhite;
             text-align: center;
 
             @include openSansCond(700);
+
+            @include mq(1023) {
+                font-size: 34px;
+            }
+
+            @include mq(767) {
+                font-size: 30px;
+            }
         }
     }
 
@@ -59,10 +91,24 @@
         margin: 0 auto 63px;
 
         background-color: rgba(#001A48, .85);
+
+        @include mq(1023) {
+            width: 100%;
+            padding: 126px 30px 40px;
+        }
+
+        @include mq(767) {
+            padding: 126px 15px 20px;
+            margin: 0 auto 21px;
+        }
     }
 
     &__form-title {
         padding: 0 65px 20px 0;
+
+        @include mq(767) {
+            padding: 0 0 10px;
+        }
 
         h2 {
             font-size: 40px;
@@ -70,6 +116,14 @@
             text-align: center;
 
             @include openSansCond(700);
+
+            @include mq(1023) {
+                font-size: 34px;
+            }
+
+            @include mq(767) {
+                font-size: 30px;
+            }
         }
     }
 
@@ -81,18 +135,31 @@
         text-align: center;
 
         @include montserrat(400);
+
+        @include mq(767) {
+            padding: 0 0 9px;
+        }
     }
 
     &__form-row {
         display: flex;
         justify-content: space-between;
-        margin: 20px 0 27px;
+        margin: 20px 0 0;
+
+        @include mq(1023) {
+            flex-wrap: wrap;
+        }
+
+        @include mq(767) {
+            margin: 0;
+        }
 
         input,
         textarea {
             width: 340px;
             height: 65px;
             padding: 24px 0;
+            margin: 0 0 27px;
 
             border: none;
             outline: none;
@@ -103,6 +170,15 @@
             color: $colorWhite;
 
             @include montserrat(400);
+
+            @include mq(1023) {
+                width: 100%;
+            }
+
+            @include mq(767) {
+                height: 50px;
+                margin: 0 0 15px;
+            }
 
             &::placeholder {
                 color: $colorWhite;
@@ -120,6 +196,14 @@
     &__form-footer {
         display: flex;
         justify-content: space-between;
+
+        @include mq(767) {
+            flex-wrap: wrap;
+
+            button {
+                margin: 0 auto;
+            }
+        }
     }
 
     &__form-notes {
@@ -130,6 +214,12 @@
         color: $colorWhite;
 
         @include montserrat(400);
+
+        @include mq(767) {
+            width: 100%;
+            max-width: 100%;
+            margin: 0 0 20px;
+        }
     }
 
     &__content {
@@ -138,10 +228,22 @@
         left: 50%;
 
         width: 1146px;
+        max-width: 95%;
         height: 372px;
 
         box-shadow: 0 0 15px 5px rgba($colorBlue, .5);
         transform: translate3d(-50%, 0, 0);
+
+        @include mq(767) {
+            top: 257px;
+
+            width: 100%;
+            height: 440px;
+        }
+
+        @include mq(449) {
+            top: 302px;
+        }
 
         &.is-open {
             position: fixed;
@@ -157,12 +259,16 @@
 
             transform: translate3d(0, 0, 0);
 
+            @include mq(1023) {
+                padding: 50px;
+            }
+
             .contacts__info {
                 display: none;
             }
 
             .contacts__map {
-                background-color: $colorWhite;
+                background-color: #EEE;
             }
 
             .contacts__content-close {
@@ -178,6 +284,11 @@
                 vertical-align: top;
 
                 transition: opacity .3s ease-out;
+
+                @include mq(1023) {
+                    top: 10px;
+                    right: 10px;
+                }
 
                 svg {
                     width: 36px;
@@ -207,12 +318,29 @@
         padding: 32px 29px 29px;
 
         background-color: $colorWhite;
+
+        @include mq(767) {
+            top: -158px;
+            left: 50%;
+
+            padding: 15px 10px 15px 20px;
+
+            transform: translate3d(-50%, 0, 0);
+        }
+
+        @include mq(449) {
+            width: 270px;
+        }
     }
 
     &__info-inner {
         padding: 0 0 12px 23px;
 
         border-left: 2px solid $colorLightBlue2;
+
+        @include mq(767) {
+            padding: 0 0 5px 15px;
+        }
     }
 
     &__info-phone {
@@ -224,6 +352,12 @@
         text-decoration: none;
 
         @include montserrat(700);
+
+        @include mq(767) {
+            margin: 0 0 10px;
+
+            font-size: 17px;
+        }
     }
 
     &__info-address,
@@ -234,33 +368,51 @@
         text-decoration: none;
 
         @include montserrat(400);
+
+        @include mq(767) {
+            font-size: 13px;
+        }
     }
 
-    &__map,
-    &__map-wrapper {
+    &__map {
         width: 100%;
         height: 100%;
 
-        iframe {
-            width: 100%;
-            height: 100%;
-        }
+        background-color: $colorWhite;
     }
 
     .eis__icon-2 {
         bottom: 32.4%;
-        left: 23.2%;
+        left: 50%;
 
-        transform: scale(.85);
+        transform: scale(.85) translate3d(-603px, 0, 0);
+
+        // @include mq(1023) {
+        //     display: none;
+        // }
     }
 
     .eis__icon-10 {
         top: -36px;
         left: 13.9%;
+
+        // @include mq(1023) {
+        //     display: none;
+        // }
     }
 
     .eis__icon-11 {
         bottom: 69px;
-        right: 13.3%;
+        left: 50%;
+
+        transform: translate3d(568px, 0, 0);
+
+        @include mq(1439) {
+            transform: translate3d(380px, 0, 0);
+        }
+
+        @include mq(1023) {
+            display: none;
+        }
     }
 }

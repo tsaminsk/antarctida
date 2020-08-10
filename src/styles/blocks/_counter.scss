@@ -1,10 +1,29 @@
 .counter {
     position: relative;
 
-    min-height: 418px;
+    height: 418px;
 
     background: url('../../assets/images/counter_bg.jpg') center center no-repeat;
     background-size: cover;
+
+    @include mq(1439) {
+        height: 372px;
+    }
+
+    @include mq(1023) {
+        height: 300px;
+    }
+
+    @include mq(767) {
+        height: auto;
+    }
+
+    @include mq(449) {
+
+        .container {
+            overflow: hidden;
+        }
+    }
 
     &::before {
         position: absolute;
@@ -21,12 +40,32 @@
     &__title {
         padding: 75px 0 57px;
 
+        @include mq(1439) {
+            padding: 65px 0 50px;
+        }
+
+        @include mq(1023) {
+            padding: 35px 0 45px;
+        }
+
+        @include mq(767) {
+            padding: 35px 0 23px;
+        }
+
         h2 {
             font-size: 40px;
             // letter-spacing: .01px;
             color: $colorBlue;
 
             @include openSansCond(200);
+
+            @include mq(1023) {
+                font-size: 34px;
+            }
+
+            @include mq(767) {
+                font-size: 34px;
+            }
 
             b {
                 letter-spacing: normal;
@@ -40,18 +79,44 @@
         display: flex;
         justify-content: space-between;
         padding: 0 20px 0 9px;
+
+        @include mq(1439) {
+            padding: 0;
+        }
+
+        @include mq(767) {
+            flex-wrap: wrap;
+
+            padding: 0 0 40px;
+        }
     }
 
     &__item {
         display: flex;
         margin: 0 18px 0 0;
 
+        @include mq(1023) {
+            margin: 0 9px 0 0;
+        }
+
+        @include mq(767) {
+            margin: 0 0 20px;
+        }
+
         &:nth-child(2) .counter__item-text::before {
             right: 18px;
+
+            @include mq(767) {
+                right: 67px;
+            }
         }
 
         &:nth-child(3) .counter__item-text::before {
             right: -6px;
+
+            @include mq(767) {
+                right: 21px;
+            }
         }
     }
 
@@ -65,6 +130,20 @@
         color: $colorBlue;
 
         @include openSansCond(700);
+
+        @include mq(1439) {
+            margin: 0 12px 0 0;
+
+            font-size: 82px;
+            letter-spacing: -1px;
+        }
+
+        @include mq(1023) {
+            margin: 0 9px 0 0;
+
+            font-size: 72px;
+            letter-spacing: -3px;
+        }
     }
 
     &__item-text {
@@ -79,6 +158,16 @@
 
         @include montserrat(400);
 
+        @include mq(1439) {
+            font-size: 16px;
+            line-height: 23px;
+        }
+
+        @include mq(1023) {
+            font-size: 14px;
+            line-height: 20px;
+        }
+
         &::before {
             position: absolute;
             top: 4px;
@@ -90,12 +179,29 @@
 
             border-radius: 50%;
             background-color: $colorBlue2;
+
+            @include mq(767) {
+                right: 30px;
+            }
         }
     }
 
     .eis__icon-1 {
         top: -40px;
         right: 21%;
+
+        @include mq(1439) {
+            right: 8%;
+        }
+
+        @include mq(1439) {
+            transform: scale(.75);
+        }
+
+        @include mq(767) {
+            top: 87%;
+            right: -15px;
+        }
     }
 
     .eis__icon-2 {
@@ -103,10 +209,29 @@
         left: 60.5%;
 
         transform: scale(.65);
+
+        @include mq(767) {
+            top: -12%;
+            left: 75%;
+
+            transform: scale(.85);
+        }
+
+        @include mq(449) {
+            left: calc(100% - 100px);
+        }
     }
 
     .eis__icon-3 {
         bottom: -62px;
         left: 16%;
+
+        @include mq(1439) {
+            bottom: -45px;
+        }
+
+        @include mq(767) {
+            left: 3%;
+        }
     }
 }

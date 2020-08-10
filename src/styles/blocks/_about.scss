@@ -7,6 +7,14 @@
     background: url('../../assets/images/about_bg.jpg') center center no-repeat;
     background-size: 100% 100%;
 
+    @include mq(1439) {
+        padding: 240px 0 27px;
+    }
+
+    @include mq(1023) {
+        padding: 240px 0 0;
+    }
+
     &__title {
         padding: 0 0 0 7px;
 
@@ -18,6 +26,12 @@
             color: $colorBlue;
 
             @include openSansCond(200);
+
+            @include mq(1023) {
+                font-size: 34px;
+
+                text-align: center;
+            }
 
             b {
                 display: inline-block;
@@ -32,8 +46,15 @@
     &__content {
         position: relative;
 
-        // height: 721px;
         padding: 98px 0 0 517px;
+
+        @include mq(1439) {
+            padding: 60px 0 0 307px;
+        }
+
+        @include mq(767) {
+            padding: 21px 0 0;
+        }
     }
 
     &__image {
@@ -44,10 +65,43 @@
 
         width: 510px;
         height: 721px;
+
+        @include mq(1439) {
+            top: 107px;
+            left: -37px;
+
+            width: 350px;
+            height: auto;
+        }
+
+        @include mq(1023) {
+            z-index: 1;
+            top: 58px;
+            left: -66px;
+        }
+
+        @include mq(767) {
+            top: 129px;
+            left: -82px;
+
+            width: 290px;
+        }
+
+        @include mq(449) {
+            display: none;
+        }
+
+        img {
+            width: 100%;
+        }
     }
 
     &__description {
         margin: 0 0 73px;
+
+        @include mq(1023) {
+            margin: 0 0 50px;
+        }
     }
 
     &__quote {
@@ -63,6 +117,33 @@
 
         @include montserrat(700);
 
+        @include mq(1439) {
+            margin: 0 0 30px;
+
+            font-size: 21px;
+        }
+
+        @include mq(1023) {
+            width: 425px;
+            margin: 0 0 50px;
+
+            font-size: 19px;
+        }
+
+        @include mq(767) {
+            width: calc(100% - 50px);
+            margin: 0 0 20px 50px;
+
+            font-size: 18px;
+            line-height: 28px;
+        }
+
+        @include mq(449) {
+            margin: 0 0 10px 40px;
+
+            line-height: 24px;
+        }
+
         &::before {
             content: '"';
             position: absolute;
@@ -75,6 +156,20 @@
             color: $colorBlue2;
 
             @include openSansCond(700);
+
+            @include mq(1439) {
+                top: 31px;
+                left: -65px;
+
+                font-size: 200px;
+            }
+
+            @include mq(767) {
+                top: 25px;
+                left: -49px;
+
+                font-size: 150px;
+            }
         }
     }
 
@@ -90,6 +185,31 @@
 
         @include montserrat(400);
 
+        @include mq(1439) {
+            margin: 0 0 40px 39px;
+        }
+
+        @include mq(1023) {
+            margin: 0 0 55px 39px;
+
+            font-size: 19px;
+            line-height: 28px;
+        }
+
+        @include mq(767) {
+            width: 50%;
+            margin: 0 0 0 50%;
+
+            font-size: 16px;
+            line-height: 25px;
+        }
+
+        @include mq(449) {
+            width: 100%;
+            padding: 0 0 0 40px;
+            margin: 0 0 20px;
+        }
+
         &::before {
             content: '';
             position: absolute;
@@ -100,6 +220,18 @@
             height: 132px;
 
             background-color: $colorBlue;
+
+            @include mq(1439) {
+                left: -36px;
+            }
+
+            @include mq(1023) {
+                height: 100%;
+            }
+
+            @include mq(767) {
+                display: none;
+            }
         }
     }
 
@@ -111,7 +243,30 @@
         padding: 29px 82px 45px;
 
         background-color: $colorWhite;
+        box-shadow: 0 0 10px 4px rgba($colorBlue, .1);
         transform: translate3d(-45px, 0, 0);
+
+        @include mq(1439) {
+            width: 585px;
+            padding: 20px 82px 35px;
+        }
+
+        @include mq(1023) {
+            z-index: 2;
+
+            transform: translate3d(-50%, 0, 0);
+        }
+
+        @include mq(767) {
+            width: 100%;
+            padding: 20px 25px 35px;
+
+            transform: translate3d(0, 0, 0);
+        }
+
+        @include mq(449) {
+            padding: 15px 15px 35px;
+        }
     }
 
     &__author-name {
@@ -122,6 +277,10 @@
         color: $colorGray;
 
         @include openSansCond(700);
+
+        @include mq(767) {
+            font-size: 24px;
+        }
     }
 
     &__author-position {
@@ -133,21 +292,72 @@
         color: $colorGray;
 
         @include montserrat(400);
+
+        @include mq(767) {
+            padding: 0 74px 0 0;
+
+            font-size: 15px;
+        }
+
+        @include mq(449) {
+            font-size: 12px;
+            line-height: 19px;
+        }
     }
 
     &__author-icon {
         position: absolute;
         top: 10px;
         right: -57px;
+
+        @include mq(767) {
+            top: 64px;
+            right: 24px;
+        }
+
+        @include mq(449) {
+            top: auto;
+            bottom: 10px;
+            right: 5px;
+
+            transform: scale(.75);
+            transform-origin: 100% 100%;
+        }
     }
 
     .eis__icon-7 {
         top: 37.5%;
         left: 17.4%;
+
+        @include mq(1439) {
+            top: 32%;
+            left: 40px;
+        }
+
+        @include mq(1023) {
+            top: 25%;
+            left: 15px;
+        }
+
+        @include mq(767) {
+            display: none;
+        }
     }
 
     .eis__icon-6 {
         bottom: -22px;
         right: 33.4%;
+
+        @include mq(1023) {
+            right: .5%;
+            bottom: -73px;
+
+            transform: scale(.5);
+            transform-origin: 50% 50%;
+        }
+
+        @include mq(767) {
+            display: none;
+        }
     }
 }
